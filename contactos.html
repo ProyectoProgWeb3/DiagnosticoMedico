@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Salud 24/7 </title>
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/zerogrid.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/responsiveslides.css" />
+	
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+	
+    <script src="js/jquery.min.js"></script>
+	<script src="js/responsiveslides.js"></script>
+	<script>
+		$(function () {
+		  $("#slider").responsiveSlides({
+			auto: true,
+			pager: false,
+			nav: true,
+			speed: 500,
+			maxwidth: 962,
+			namespace: "centered-btns"
+		  });
+		});
+	</script>
+</head>
+<body>
+<!--------------Header--------------->
+<header>
+	<div class="wrap-header zerogrid">
+		<div id="logo"><a href="#"><img src="./images/logo1.jpg"/></a></div>
+		<div class="social">
+			<ul>
+				<li><a href="#"><img src="./images/social/facebook-icon.png" /></a></li>
+				<li><a href="#"><img src="./images/social/google-icon.png" /></a></li>
+				<li><a href="#"><img src="./images/social/twitter-bird-icon.png" /></a></li>
+			</ul>
+		</div>
+		<nav>
+			<div class="wrap-nav">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="blog.html">La Empresa</a></li>
+						<li><a href="gallery.html">Galeria</a></li>
+						<li><a href="noticias.html">Noticias</a></li>
+						<li class="current"><a href="contactos.html">Contactos</a></li>
+					</ul>
+				</div>
+				
+				<div class="minimenu"><div>MENU</div>
+					<select onchange="location=this.value">
+						<option></option>
+						<option value="index.html">Inicio</option>
+						<option value="historia.html">La Empresa</option>
+						<option value="gallery.html">Galeria</option>
+						<option value="noticias.html">Noticias</option>
+						<option value="contactos.html">Contactos</option>
+					</select>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<!--------------Content--------------->
+<section id="content">
+	<div class="wrap-content zerogrid">
+		<div class="row block05">
+			<div class="title"><span>CONTACTOS</span></div>
+			<div class="col-2-3">
+				<div class="wrap-col">
+					<article>
+						<div class="comment">
+							Su direccion electronica Llene los datos del formulario *
+							<form>
+								<div><input type="text" name="name" id="name"> Nombres *</div>
+								<div><input type="email" name="email" id="email"> Email *</div>
+								<div><input type="url" name="website" id="website"> Website</div>
+								<div><textarea rows="10" name="comment" id="comment"></textarea></div>
+								<div><input type="submit" name="submit" value="Submit"></div>
+							</form>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div class="col-1-3">
+				<div class="wrap-col">
+					<div class="box">
+						<div class="heading"><h2>Encuentranos en:</h2></div>
+						<div class="content">
+							<img src="images/map.png"/>
+							<p>Puerto Azul, Edificio Torres del Eden, Via a la Costa</p>
+							<p>Telefono : +593 (04) 2078340 </p>
+							<p>Celular : +593 (09) 92728868</p>
+							<p>Email : anavaleria3001@hotmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body></html>
