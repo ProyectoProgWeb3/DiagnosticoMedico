@@ -53,7 +53,7 @@
 	
 </header>
 
-<!--------------Content--------------->
+<!--------------Contenido--------------->
 <section id="content">
 	<div class="wrap-content zerogrid">
 	<div class="row block05">
@@ -63,7 +63,7 @@
 					<article>
 						<div class="reg">
 							Campos Requeridos *
-							<form action="/es/nuevo-paciente/menor" method="post" name="contact" id="form_nuevo_paciente">
+							<form action="registro.php" method="post" name="contact">
 
   
   <div class="contactForm nuevo_paciente">
@@ -73,8 +73,7 @@
       <label for="nombre">Nombre completo</label>
       <input tabindex="1" type="text" name="nombre" id="nombre" class="txtBox" value="" />
       <br class="clear" />
-    </div>
-    
+    </div>    
     <div class="clear"></div>
 
     <div class="leftCol">
@@ -82,7 +81,7 @@
       <input tabindex="2" type="text" name="direccion" id="direccion" class="txtBox" value="" />
       <br class="clear" />
       <label for="poblacion">Ciudad</label>
-      <input tabindex="4" type="text" name="poblacion" id="poblacion" class="txtBox" value="" />
+      <input tabindex="4" type="text" name="ciudad" id="poblacion" class="txtBox" value="" />
       <br class="clear" />
       <label for="email">E-mail</label>
       <input tabindex="6" type="text" name="email" id="email" class="txtBox" value="" />
@@ -96,318 +95,9 @@
       <br class="clear" />
     </div>
 
-    <div class="rightCol">
-      <label for="cp">Teléfono Convencional</label>
-      <input tabindex="3" type="text" name="cp" id="cp" class="txtBox" value="" />
-      <br class="clear" />
-      <label for="telefono1">Teléfono Celular 1</label>
-      <input tabindex="5" type="text" name="telefono1" id="telefono1" class="txtBox" value="" />
-      <br class="clear" />
-      <label for="telefono2">Teléfono Celular 2</label>
-      <input tabindex="7" type="text" name="telefono2" id="telefono2" class="txtBox" value="" />
-      <br class="clear" />
-      <label for="edad">Edad</label>
-      <input tabindex="9" type="text" name="edad" id="edad" class="txtBox" value="" />
-      <br class="clear" />
-            <label for="aficiones" style="width: auto">Aficiones y/o deportes</label>
-      <br class="clear" />
-      <textarea tabindex="11" name="aficiones" id="aficiones" cols="10" rows="10"></textarea>
-      <br class="clear" />
-    </div>
 
-    <div class="clear"></div>
-
-    <label for="referer" style="width: auto">¿Quién le recomendó nuestra página?</label>
-    <input tabindex="12" style="margin: 0" type="text" name="referer" id="referer" class="txtBox" value="" />
-    <br class="clear" />
-
-    <div class="clear"></div>
+    
   </div>
-        <div class="contactForm nuevo_paciente">
-    <h3>Información familiar</h3>
-        <div class="leftCol">
-          <label for="padre" style="width: 160px; padding-right: 0">Nombre del padre/tutor</label>
-          <input tabindex="13" type="text" name="padre" id="padre" class="txtBox" value="" style="width: 250px; float:right; margin-right:13px;"/>
-          <br class="clear" />
-          <label for="profesion-padre" style="width: 160px; padding-right: 0">Profesión</label>
-          <input tabindex="15" type="text" name="profesion_padre" id="profesion-padre" class="txtBox" value=""  style="width: 250px; float:right; margin-right:13px;"/>
-          <br class="clear" />
-          <label for="madre" style="width: 180px; padding-right: 0">Nombre de la madre/tutor</label>
-          <input tabindex="17" type="text" name="madre" id="madre" class="txtBoxTutor" value="" style="width: 250px; float:right; margin-right:13px;" />
-          <br class="clear" />
-          <label for="profesion-madre" style="width: 160px; padding-right: 0">Profesión</label>
-          <input tabindex="19" type="text" name="profesion_madre" id="profesion-madre" class="txtBox" value=""  style="width: 250px; float:right; margin-right:13px;"/>
-          <br class="clear" />
-        </div>
-        <div class="rightCol">
-          <label for="nif-padre">Cédula Padre</label>
-          <input tabindex="14" type="text" name="nif_padre" id="nif-padre" class="txtBox" value="" />
-          <br class="clear" />
-          <label for="telefono-trabajo-padre">Teléfono trabajo</label>
-          <input tabindex="16" type="text" name="telefono_trabajo_padre" id="telefono-trabajo-padre" class="txtBox" value="" />
-          <br class="clear" />
-          <label for="nif-madre">Cédula Madre</label>
-          <input tabindex="18" type="text" name="nif_madre" id="nif-madre" class="txtBox" value="" />
-          <br class="clear" />
-          <label for="telefono-trabajo-madre">Teléfono trabajo</label>
-          <input tabindex="20" type="text" name="telefono_trabajo_madre" id="telefono-trabajo-madre" class="txtBox" value="" />
-          <br class="clear" />
-        </div>
-        <label for="hijos" style="width: auto">Nombre y edades de sus otros hijos</label>
-        <br class="clear" />
-        <textarea tabindex="21" name="hijos" id="hijos" cols="10" rows="10"></textarea>
-        <br class="clear" />
-          <div class="clear"></div>
-  </div>
-
-  <div class="contactForm nuevo_paciente checkboxes">
-    <h3>Historia médica</h3>
-
-    <div class="leftCol">
-      <span>¿Goza usted de buena salud?</span>
-    </div>
-    <div class="rightCol">
-      <label for="salud-no" onclick="$('#div-salud-txt')[0].style.display='block'" class="checkbox">No</label>
-      <input tabindex="22" onclick="$('#div-salud-txt')[0].style.display='block'" type="radio" name="salud" id="salud-no" value="No" class="txtBox"  />
-      <label for="salud-si" onclick="$('#div-salud-txt')[0].style.display='none'" class="checkbox">Sí</label>
-      <input tabindex="23" onclick="$('#div-salud-txt')[0].style.display='none'" type="radio" name="salud" id="salud-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-salud-txt">
-      <label for="salud-txt" class="checkbox">Explique</label>
-      <input tabindex="24" type="text" name="salud_txt" id="salud-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Ha tenido o tiene algún problema de salud?</span>
-    </div>
-    <div class="rightCol">
-      <label for="problema-salud-no" onclick="$('#div-problema-salud-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="25" onclick="$('#div-problema-salud-txt')[0].style.display='none'" type="radio" name="problema_salud" id="problema-salud-no" value="No" class="txtBox"  />
-      <label for="problema-salud-si" onclick="$('#div-problema-salud-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="26" onclick="$('#div-problema-salud-txt')[0].style.display='block'" type="radio" name="problema_salud" id="problema-salud-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-problema-salud-txt">
-      <label for="problema-salud-txt" class="checkbox">Explique</label>
-      <input tabindex="27" type="text" name="problema_salud_txt" id="problema-salud-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Está a tratamiento médico?</span>
-    </div>
-    <div class="rightCol">
-      <label for="tratamiento-no" onclick="$('#div-tratamiento-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="28" onclick="$('#div-tratamiento-txt')[0].style.display='none'" type="radio" name="tratamiento" id="tratamiento-no" value="No" class="txtBox"  />
-      <label for="tratamiento-si" onclick="$('#div-tratamiento-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="29" onclick="$('#div-tratamiento-txt')[0].style.display='block'" type="radio" name="tratamiento" id="tratamiento-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-tratamiento-txt">
-      <label for="tratamiento-txt" class="checkbox">Explique</label>
-      <input tabindex="30" type="text" name="tratamiento_txt" id="tratamiento-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Está tomando algún medicamento?</span>
-    </div>
-    <div class="rightCol">
-      <label for="medicamento-no" onclick="$('#div-medicamento-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="31" onclick="$('#div-medicamento-txt')[0].style.display='none'" type="radio" name="medicamento" id="medicamento-no" value="No" class="txtBox"  />
-      <label for="medicamento-si" onclick="$('#div-medicamento-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="32" onclick="$('#div-medicamento-txt')[0].style.display='block'" type="radio" name="medicamento" id="medicamento-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-medicamento-txt">
-      <label for="medicamento-txt" class="checkbox">¿Cuál?</label>
-      <input tabindex="33" type="text" name="medicamento_txt" id="medicamento-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Es alérgico/a a algún medicamento?</span>
-    </div>
-    <div class="rightCol">
-      <label for="alergico-medicamento-no" onclick="$('#div-alergico-medicamento-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="34" onclick="$('#div-alergico-medicamento-txt')[0].style.display='none'" type="radio" name="alergico_medicamento" id="alergico-medicamento-no" value="No" class="txtBox"  />
-      <label for="alergico-medicamento-si" onclick="$('#div-alergico-medicamento-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="35" onclick="$('#div-alergico-medicamento-txt')[0].style.display='block'" type="radio" name="alergico_medicamento" id="alergico-medicamento-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-alergico-medicamento-txt">
-      <label for="alergico-medicamento-txt" class="checkbox">Citar</label>
-      <input tabindex="36" type="text" name="alergico_medicamento_txt" id="alergico-medicamento-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Es alérgico/a a algún metal, plástico o látex?</span>
-    </div>
-    <div class="rightCol">
-      <label for="alergico-material-no" onclick="$('#div-alergico-material-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="37" onclick="$('#div-alergico-material-txt')[0].style.display='none'" type="radio" name="alergico_material" id="alergico-material-no" value="No" class="txtBox"  />
-      <label for="alergico-material-si" onclick="$('#div-alergico-material-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="38" onclick="$('#div-alergico-material-txt')[0].style.display='block'" type="radio" name="alergico_material" id="alergico-material-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-alergico-material-txt">
-      <label for="alergico-material-txt" class="checkbox">Citar</label>
-      <input tabindex="39" type="text" name="alergico_material_txt" id="alergico-material-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Es alérgico/a a alguna otra cosa?</span>
-    </div>
-    <div class="rightCol">
-      <label for="alergico-no" onclick="$('#div-alergico-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="40" onclick="$('#div-alergico-txt')[0].style.display='none'" type="radio" name="alergico" id="alergico-no" value="No" class="txtBox"  />
-      <label for="alergico-si" onclick="$('#div-alergico-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="41" onclick="$('#div-alergico-txt')[0].style.display='block'" type="radio" name="alergico" id="alergico-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-alergico-txt">
-      <label for="alergico-txt" class="checkbox">Citar</label>
-      <input tabindex="42" type="text" name="alergico_txt" id="alergico-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Ha estado alguna vez hospitalizado/a?</span>
-    </div>
-    <div class="rightCol">
-      <label for="hospitalizado-no" onclick="$('#div-hospitalizado-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="43" onclick="$('#div-hospitalizado-txt')[0].style.display='none'" type="radio" name="hospitalizado" id="hospitalizado-no" value="No" class="txtBox"  />
-      <label for="hospitalizado-si" onclick="$('#div-hospitalizado-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="44" onclick="$('#div-hospitalizado-txt')[0].style.display='block'" type="radio" name="hospitalizado" id="hospitalizado-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-hospitalizado-txt">
-      <label for="hospitalizado-txt" class="checkbox">¿Por qué?</label>
-      <input tabindex="45" type="text" name="hospitalizado_txt" id="hospitalizado-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Le han operado de amígdalas y/o adenoides (vegetaciones)?</span>
-    </div>
-    <div class="rightCol">
-      <label for="vegetaciones-no" onclick="$('#div-vegetaciones-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="46" onclick="$('#div-vegetaciones-txt')[0].style.display='none'" type="radio" name="vegetaciones" id="vegetaciones-no" value="No" class="txtBox"  />
-      <label for="vegetaciones-si" onclick="$('#div-vegetaciones-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="47" onclick="$('#div-vegetaciones-txt')[0].style.display='block'" type="radio" name="vegetaciones" id="vegetaciones-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-vegetaciones-txt">
-    	<label for="vegetaciones_ambas" class="">De ambas cosas</label>
-        <input type="radio" name="vegetaciones_cual" id="vegetaciones_ambas" value="Ambas" />
-        <br class="clear" />
-        <label for="vegetaciones_vegetaciones" class="">Sólo vegetaciones</label>
-        <input type="radio" name="vegetaciones_cual" id="vegetaciones_vegetaciones" value="Solo Vegetaciones" />
-        <br class="clear" />
-        <label for="vegetaciones_amigdalas" class="">Sólo amígdalas</label>
-        <input type="radio" name="vegetaciones_cual" id="vegetaciones_amigdalas" value="Solo Amigdalas" />
-        <br class="clear" />
-      <label for="vegetaciones-txt" class="checkbox">¿Cuándo?</label>
-      <input tabindex="48" type="text" name="vegetaciones_txt" id="vegetaciones-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    	<div class="leftCol">
-      <span>¿Respira normalmente bien por la nariz?</span>
-    </div>
-    <div class="rightCol">
-      <label for="nariz-no" onclick="$('#div-nariz-txt')[0].style.display='block'" class="checkbox">No</label>
-      <input tabindex="49" onclick="$('#div-nariz-txt')[0].style.display='block'" type="radio" name="nariz" id="nariz-no" value="No" class="txtBox"  />
-      <label for="nariz-si" onclick="$('#div-nariz-txt')[0].style.display='none'" class="checkbox">Sí</label>
-      <input tabindex="50" onclick="$('#div-nariz-txt')[0].style.display='none'" type="radio" name="nariz" id="nariz-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-nariz-txt">
-      <label for="nariz-txt" class="checkbox">Explique</label>
-      <input tabindex="51" type="text" name="nariz_txt" id="nariz-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-	    
-    <div class="leftCol">
-      <span>Niñas: ¿Ha tenido su 1ª menstruación?</span>
-    </div>
-    <div class="rightCol">
-      <label for="mujer-no" onclick="$('#div-mujer-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="52" onclick="$('#div-mujer-txt')[0].style.display='none'" type="radio" name="mujer" id="mujer-no" value="No" class="txtBox"  />
-      <label for="mujer-si" onclick="$('#div-mujer-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="53" onclick="$('#div-mujer-txt')[0].style.display='block'" type="radio" name="mujer" id="mujer-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-mujer-txt">
-      <label for="mujer-txt" class="checkbox">Fecha Aprox.</label>
-      <input tabindex="54" type="text" name="mujer_txt" id="mujer-txt" class="txtBox" value="" style="width: 240px;" />
-    </div>
-    <br class="clear" />
-    <div class="clear"></div>
-  </div>
-
-  <div class="contactForm nuevo_paciente checkboxes">
-    <h3>Historia dental</h3>
-
-    <div class="leftCol">
-      <label for="dentista">Nombre de su dentista</label>
-      <input tabindex="55" type="text" name="dentista" id="dentista" class="txtBox" value="" />
-      <br class="clear" />
-    </div>
-    <div class="rightCol">
-      <label for="dentista-telefono">Teléfono</label>
-      <input tabindex="56" type="text" name="dentista_telefono" id="dentista-telefono" class="txtBox" value="" />
-      <br class="clear" />
-    </div>
-    <div class="clear"></div>
-    <div class="leftCol">
-      <label for="dentista-direccion">Dirección</label>
-      <input tabindex="57" type="text" name="dentista_direccion" id="dentista-direccion" class="txtBox" value="" />
-      <br class="clear" />
-    </div>
-    <div class="rightCol">
-      <label for="dentista-localidad">Localidad</label>
-      <input tabindex="58" type="text" name="dentista_localidad" id="dentista-localidad" class="txtBox" value="" />
-      <br class="clear" />
-    </div>
-    <div class="rightCol">
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Está usted actualmente recibiendo algún tratamiento dental?</span>
-    </div>
-    <div class="rightCol">
-      <label for="tratamiento-dental-no" onclick="$('#div-tratamiento-dental-txt')[0].style.display='none'"  class="checkbox">No</label>
-      <input tabindex="59" onclick="$('#div-tratamiento-dental-txt')[0].style.display='none'"  type="radio" name="tratamiento_dental" id="tratamiento-dental-no" value="No" class="txtBox"  />
-      <label for="tratamiento-dental-si" onclick="$('#div-tratamiento-dental-txt')[0].style.display='block'"  class="checkbox">Sí</label>
-      <input tabindex="60" onclick="$('#div-tratamiento-dental-txt')[0].style.display='block'" type="radio" name="tratamiento_dental" id="tratamiento-dental-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-tratamiento-dental-txt">
-      <label for="tratamiento-dental-txt" class="checkbox">Explique</label>
-      <input tabindex="61" type="text" name="tratamiento_dental_txt" id="tratamiento-dental-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Ha sufrido algún traumatismo facial o dental?</span>
-    </div>
-    <div class="rightCol">
-      <label for="traumatismo-no" onclick="$('#div-traumatismo-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="62" onclick="$('#div-traumatismo-txt')[0].style.display='none'" type="radio" name="traumatismo" id="traumatismo-no" value="No" class="txtBox"  />
-      <label for="traumatismo-si" onclick="$('#div-traumatismo-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="63" onclick="$('#div-traumatismo-txt')[0].style.display='block'" type="radio" name="traumatismo" id="traumatismo-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-traumatismo-txt">
-      <label for="traumatismo-txt" class="checkbox">Explique</label>
-      <input tabindex="64" type="text" name="traumatismo_txt" id="traumatismo-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <div class="leftCol">
-      <span>¿Le han hecho tratamiento de ortodoncia con anterioridad?</span>
-    </div>
-    <div class="rightCol">
-      <label for="ortodoncia-no" onclick="$('#div-ortodoncia-txt')[0].style.display='none'" class="checkbox">No</label>
-      <input tabindex="65" onclick="$('#div-ortodoncia-txt')[0].style.display='none'" type="radio" name="ortodoncia" id="ortodoncia-no" value="No" class="txtBox"  />
-      <label for="ortodoncia-si" onclick="$('#div-ortodoncia-txt')[0].style.display='block'" class="checkbox">Sí</label>
-      <input tabindex="66" onclick="$('#div-ortodoncia-txt')[0].style.display='block'" type="radio" name="ortodoncia" id="ortodoncia-si" value="Sí" class="txtBox"  />
-    </div>
-    <div class="rightCol" style="display: none" id="div-ortodoncia-txt">
-      <label for="ortodoncia-txt" class="checkbox">Explique</label>
-      <input tabindex="67" type="text" name="ortodoncia_txt" id="ortodoncia-txt" class="txtBox" value="" />
-    </div>
-    <br class="clear" />
-    <label for="informacion" class="checkbox">¿Cree que hay alguna otra información que pueda sernos útil?</label><br class="clear" />
-    <textarea tabindex="68" name="informacion" id="informacion" cols="10" rows="10"></textarea>
-    <br />
-    <br class="clear" />
-    <div class="clear"></div>
- 	<input type="checkbox" class="chkPol" name="aceptar_politica" value="1"/> He leído y acepto la <a class="linkajax" href="">Política de privacidad</a>.
-  </div>
-
-
  <input type="submit" class="button" value="Enviar" name="submit">
 </form>
 						</div>
