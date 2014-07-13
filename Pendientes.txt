@@ -1,0 +1,4 @@
+
+-Mejora de las CSS
+-Responsive design
+-Formularios
