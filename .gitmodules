@@ -1,0 +1,3 @@
+[submodule "basedatos"]
+	path = basedatos
+	url = git@github.com:
