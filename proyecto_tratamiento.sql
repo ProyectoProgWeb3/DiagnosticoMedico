@@ -18,33 +18,29 @@ USE `proyecto`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `persona`
+-- Table structure for table `tratamiento`
 --
 
-DROP TABLE IF EXISTS `persona`;
+DROP TABLE IF EXISTS `tratamiento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `persona` (
-  `codpersona` int(11) NOT NULL,
-  `nombres` varchar(45) DEFAULT NULL,
-  `apellidos` varchar(45) DEFAULT NULL,
-  `sexo` char(1) DEFAULT NULL,
-  `fechanac` datetime DEFAULT NULL,
-  `celular` varchar(45) DEFAULT NULL,
-  `cedula` varchar(45) DEFAULT NULL,
-  `direccion` text,
-  `telefono` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`codpersona`)
+CREATE TABLE `tratamiento` (
+  `cod_tratamiento` int(11) NOT NULL,
+  `autorizacion` varchar(45) DEFAULT NULL,
+  `fecha` varchar(45) DEFAULT NULL,
+  `receta` text,
+  `comentario` text,
+  PRIMARY KEY (`cod_tratamiento`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `persona`
+-- Dumping data for table `tratamiento`
 --
 
-LOCK TABLES `persona` WRITE;
-/*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-/*!40000 ALTER TABLE `persona` ENABLE KEYS */;
+LOCK TABLES `tratamiento` WRITE;
+/*!40000 ALTER TABLE `tratamiento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tratamiento` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
