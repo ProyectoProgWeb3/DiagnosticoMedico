@@ -17,6 +17,9 @@
 				<nav id="promociones" class="grid_4">
 				<a href="promociones.php">Promociones</a>
 				</nav>
+				<nav id="Registrece" class="grid_4">
+				<a href="registro.php">Promociones</a>
+				</nav>
 	</div>
 	
 	<div id="contenedor_derecho" class="grid_20">
