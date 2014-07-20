@@ -22,37 +22,12 @@
 	</div>
 	
 	<div id="contenedor_derecho" class="grid_20">
-	
 		<br>
-		<p><img id="noticias" src="img/aspirina.jpg"/ align="left">
-		<b>50% de Descuento</b>
-		<br>
-		<br>
-		Al comprar una caja de aspirina<br>
-		recibe el 50% de Descuento!!
-		</p>
-		<br>
+		<h2><p align="center">Inicio de Sesion Exitoso!</p></h2>
 		
-		<p align="right"><img id="noticias" src="img/lemonflu.jpg"/ align="right">
-		<b>20% de Descuento</b>
-		<br>
-		<br>
-		Recibe el 20% de Descuento<br>
-		por la compra de una caja de LemonFlu!
-		</p>
-		<br>
 		
-		<p align="left"><img id="noticias" src="img/berocca.jpg"/ align="left">
-		<b>30% de Descuento</b>
-		<br>
-		<br>
-		Obten el 30% de Descuento<br>
-		por la compra de una caja de Berocca Perfomance!
-		</p>
-		<br>
 	
 	
-	<div class="clear"></div>
 	</div>
 	
 	<div class="clear"></div>
