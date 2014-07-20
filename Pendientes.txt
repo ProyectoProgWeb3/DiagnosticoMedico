@@ -1,4 +1,6 @@
 
 -Mejora de las CSS
+
 -Responsive design
--Formularios
+
+-Conexion a la base de datos con los formularios de Php
