@@ -1,0 +1,380 @@
+#cabecera{
+	background: url('../img/logo1.jpg') no-repeat;  
+	height:150px;
+        background-color:  #FFFFFF;
+        position: absolute;
+	width: 1008px;
+	z-index: 8;
+
+
+	
+}
+
+<style type="text/css">
+#Menu {
+	position: absolute;
+	width: 1008px;
+	height: 46px;
+	z-index: 8;
+	left: 155px;
+	top: 235px;
+	background-color: #E0FFFF;
+}
+
+#apDiv2 {	position: absolute;
+	width: 189px;
+	height: 176px;
+	z-index: 1;
+}
+#apDiv2 {
+	position: absolute;
+	width: 780px;
+	height: 151px;
+	z-index: 10;
+	left: 225px;
+	top: 23px;
+}
+#encabezado {
+	position: absolute;
+	width: 1008px;
+	height: 176px;
+	z-index: 1;
+	left: 156px;
+	top: 56px;
+}
+#Detalle {
+	position: absolute;
+	left: 155px;
+	top: 279px;
+	width: 1008px;
+	height: 736px;
+	z-index: 2;
+	background-color: #FFFFCC;
+	color:#000000
+}
+#slider1 {
+	position: absolute;
+	width: 951px;
+	height: 293px;
+	z-index: 10;
+	left: 184px;
+	top: 283px;
+}
+#slider10 {
+	position: absolute;
+	width: 247px;
+	height: 157px;
+	z-index: 20;
+	left: 911px;
+	top: 290px;
+}
+body {
+	background-color: 	#AFEEEE;
+	background-repat: repeat;
+
+}
+#publicidad {
+	position: absolute;
+	width: 1008px;
+	height: 279px;
+	z-index: 11;
+	left: 155px;
+	top: 1015px;
+	color: #FFC;
+	background-color: #FFFFCC;
+}
+#apDiv4 {
+	position: absolute;
+	width: 189px;
+	height: 37px;
+	z-index: 12;
+	left: 975px;
+	top: 18px;
+}
+div {
+	color: #0C6;
+}
+div {
+	color: #F30;
+}
+div {
+	color: #FFF;
+}
+#apDiv4 {
+	font-family: "Monotype corsiva";
+	font-size: 24px;
+}
+a:link {
+	color: #000;
+}
+a:visited {
+	color: #333;
+}
+a:active {
+	font-family: Pristina;
+}
+body,td,th {
+	color:  #AFEEEE;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	text-align: justify;
+}
+#iconTwitter {
+	position: absolute;
+	width: 50px;
+	height: 49px;
+	z-index: 1;
+	left: 756px;
+	top: 1px;
+	color: #D6D6D6;
+}
+#Detalle #apDiv5 table tr th {
+	color: #333;
+}
+#Detalle #apDiv5 table tr td {
+	color: #333;
+}
+#Detalle #apDiv5 table tr td #form3 #Ingresar {
+	text-align: center;
+}
+#fanpage {
+	position: absolute;
+	width: 231px;
+	height: 304px;
+	z-index: 13;
+	left: 763px;
+	top: 397px;
+}
+#apDiv7 {
+	position: absolute;
+	width: 203px;
+	height: 161px;
+	z-index: 10;
+	left: 16px;
+}
+
+
+
+
+#menuTop{
+	
+	height:15px;
+	width: 239px;
+	margin-left: 700px;
+	
+} 
+
+#galeria{
+	background-color:white;
+	margin-bottom:5px;
+
+}
+
+#menu_secundario{
+	width:200px;
+	margin:20px 15px;
+
+}
+
+#ubiquenos{
+	margin:20px 15px;
+	
+}
+
+#redes_sociales{
+	margin:20px 15px;
+	
+}
+
+#contenedor_izquierdo{
+
+
+}
+
+#contenedor_derecho{
+	
+	
+
+
+}
+
+#pie_pagina{
+	background-color: #E0FFFF;
+	text-align: right;
+        color: black;
+	
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+	
+	height:5%;
+}
+
+#menu ul {
+    list-style: none outside none;
+	text-transform: uppercase;
+	float:right;
+	margin-top:0px;
+}
+
+#menu ul li {
+    display: inline;
+     
+}
+
+#menu ul li a {
+    color:  	#000080;
+    display: inline;
+	float:left;
+    font-family: "Arial";
+    font-size: 13px;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menu ul li a:hover, #menu ul li .seleccionado{
+    color: #000;	
+	line-height:39px;
+	border-top: 3px solid #747474;
+	padding-top:5px;	
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset;
+	background-color:#FBFBFB;
+}
+
+#menu li {
+    cursor: pointer;
+    display: block;
+    font-size: 0.85em;
+    font-weight: bold;
+    height: 49px;
+    line-height: 49px;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+    z-index: 100;
+    color:#696969
+    
+}
+
+#iniciar_sesion{
+	background-color: 	#40E0D0;
+	border-top: 3px solid #747474;
+	font-weight: bold;
+	text-align: center;
+  
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+	
+	width:100%;
+	height:40%;
+	margin-top:20px;
+}
+
+#consulta{
+background-color: 	 	#7FFFD4;
+	border-top: 3px solid #747474;
+	font-weight: bold;
+	text-align: center;
+	
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+	
+	width:100%;
+	height:26%;
+	margin-top:0px;
+}
+
+#promociones{
+	background-color: #48D1CC;
+	border-top: 3px solid #747474;
+	font-weight: bold;
+	text-align: center;
+	
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+	
+	width:100%;
+	height:26%;
+	margin-top:0px;
+}
+#registrese{
+background-color: 	 	#7FFFD4;
+	border-top: 3px solid #747474;
+	font-weight: bold;
+	text-align: center;
+	
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+	
+	width:100%;
+	height:26%;
+	margin-top:0px;
+}
+
+ <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Restaurante/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Restaurante/style.css" type="text/css" media="screen" />
+
+/*****************************************/
+
+
+
+#sociales {
+	width:20px;
+	height:30px;
+	padding:5 10 0 10 ;
+
+	
+	
+	}
+	
+	#noticias {
+	
+	width:20%;
+	height:20%;
+	padding:5 10 0 10 ;
+	
+	
+	}
+	
+	#socios {
+	
+	
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+
+	
+	}
+	
+	#fotos {
+	
+	width:75%;
+	height:75%;
+	}
+	
+	#logos {
+	
+	width:30%;
+	height:15%;
+	
+	padding:5 10 0 10 ;
+	}
+ 
+	
