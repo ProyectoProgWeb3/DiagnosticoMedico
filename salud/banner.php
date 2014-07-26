@@ -9,7 +9,7 @@ echo <<< HERE
   </div>
 </div>
 
-<!--aqui llama mi carpeta M_S -->
+<!--aqui llama mi carpeta M_S  la cual todavia no la puedo subir-->
 
 
 
