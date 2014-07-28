@@ -1,3 +1,7 @@
+<?php
+$user=$_POST['usuario'];
+$pass1=$_POST['pass'];
+?>
 <html>
 <?php include('metadatos.php');?>
 <body>
@@ -21,60 +25,28 @@
 				</nav>
 	</div>
 	
-	<div id="contenedor_derecho" class="grid_20">
+<div id="contenedor_derecho" class="grid_10" align: center>
+<div style="border:1px solid black">
+   <br>
+   <br>
+    <label>Acceso a Pacientes </label>
+    <p></p>
+ <form action="login.php" method="post">
+    User Name:<br>
+    <input type="text" name="username"><br><br>
+    Password:<br>
+    <input type="password" name="password"><br><br>
+    <input type="submit" name="submit" value="Login">
+</form>
+</div>
+<div style="border:1px solid blue">
+	
+</div>
 		
-		
-		
-		<div class="wrap-content zerogrid">
-			<div class="row block05" align="center">
-				<div class="title"><h2>Inicio de Sesion</h2></div>
-				<div class="col-2-3">
-					<div class="wrap-col">
-						<article>
-							<div class="reg">
-								
-					
-								<form action="correcto.php" method="post" name="contact">
-
-					  
-									<div class="contactForm nuevo_paciente">
-										
-
-										<div class="leftCol">
-										<table>
-										<tr>
-											<td><label for="usuario">Nombre de Usuario</label></td>
-											<td><input tabindex="1" type="text" name="usuario" id="usuario" class="txtBox" value="" /></td>
-											<br class="clear" />
-										    <br>
-										</tr>
-										<tr>
-											
-											<td><label for="contrasena">Contrasena</label></td>
-											<td><input tabindex="2" type="text" name="contrasena" id="contrasena" class="txtBox" value="" /></td>
-											<br class="clear" />
-											<br>
-										</tr>
-										</table>
-										</div>
-
-									</div>
-									<p align="center"><input type="submit" class="button" value="Enviar" name="submit"></p>
-								</form>
-								
-								
-							</div>
-						</article>
-					</div>
-				</div>
-						
-			</div>		
 		
 	
-			
-		</div>
 	
-	
+	<div class="clear"></div>
 	</div>
 	
 	<div class="clear"></div>
