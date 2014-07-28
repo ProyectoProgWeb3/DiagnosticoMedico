@@ -41,14 +41,21 @@
 										
 
 										<div class="leftCol">
-											<label for="usuario">Nombre de Usuario</label>
-											<input tabindex="1" type="text" name="usuario" id="usuario" class="txtBox" value="" />
+										<table>
+										<tr>
+											<td><label for="usuario">Nombre de Usuario</label></td>
+											<td><input tabindex="1" type="text" name="usuario" id="usuario" class="txtBox" value="" /></td>
 											<br class="clear" />
 										    <br>
-											<label for="contrasena">Contrasena</label>
-											<input tabindex="2" type="text" name="contrasena" id="contrasena" class="txtBox" value="" />
+										</tr>
+										<tr>
+											
+											<td><label for="contrasena">Contrasena</label></td>
+											<td><input tabindex="2" type="text" name="contrasena" id="contrasena" class="txtBox" value="" /></td>
 											<br class="clear" />
 											<br>
+										</tr>
+										</table>
 										</div>
 
 									</div>

@@ -25,7 +25,7 @@
 		<br>
 		<p><b>&nbsp; &nbsp; &nbsp; &nbsp; Quienes Somos?</b></p>
 		
-		<p><img id="noticias" src="img/somosconsulta.jpg"/ align="left">
+		<p><img id="empresas" src="img/somosconsulta.jpg"/ align="left">
 		<br>
 		Somos una empresa dedicada<br>
 		a ofrecer asistencia medica especializada<br>
@@ -35,7 +35,7 @@
 		<br>
 		<br>
 		
-		<p align="right"><img id="noticias" src="img/somosdoctores.jpg"/ align="right">
+		<p align="right"><img id="empresas" src="img/somosdoctores.jpg"/ align="right">
 		<br>
 		
 		Contamos con el apoyo de profesionales<br>
