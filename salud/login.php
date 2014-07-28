@@ -1,25 +1,36 @@
-<?
-//Recibimos los valores que intrujo el usuario desde el formulario.
-$usuario = $_POST["n_usuario"];
-$password = $_POST["pwd"];
-//Creamos la conexión a la BD
-$conexion = mysql_connect("proyecto","root","jamp3212");
-mysql_select_db("proyecto",$conexion);//Escribimos la sentencia SQL que ejecutaremos.
-$sql = "SELECT codpaciente FROM paciente WHERE nombrusuario = '$usuario' AND password='$password'";
-//Ejecutamos la sentencia SQL
-$comprobar = mysql_query($sql);    //Contamos el numero de filas que arroja la sentencia SQL
-    //Solo arrojará el "id_usuario" en caso de que los datos introducidos por el usuario sean correctos
-    //Por tanto arrojará mas de -0- filas y eso nos indicará que los datos son correctos
-    
-if(mysql_num_rows($comprobar) > 0)
-    {
-    //Asignamos a una variable lo que llevará por -valor- la cookie
-    $id_usuario = mysql_result($comprobar,0);
-    //Establecemos la cookie para matener la sesión abierta.
-    setcookie("misitio_userid","$id_usuario",time() + 3600);
-    //hacemos la redirección al archivo que evalua si se inicio sesión o no.
-    header("Location:inicio.php");
+<?php
+if(isset($_POST['submit'])){
+    $dbHost = "localhost";
+    $dbUser = "root";            //Usuario de la base de datos
+    $dbPass = "jamp3212";            //Contraseña de la base de datos
+    $dbDatabase = "proyecto";    //Nombre de la base de datos
+ 
+    $db = mysql_connect($dbHost,$dbUser,$dbPass)or die("Error connecting to database.");
+ 
+    mysql_select_db($dbDatabase, $db)or die("Couldn't select the database.");
+ 
+    /*
+    El siguiente código puede ir en un archivo diferente, como puede ser 'filename.php'.
+    */
+ 
+    $usr = mysql_real_escape_string($_POST['username']);
+    $pas = hash('sha256', mysql_real_escape_string($_POST['password']));
+    $sql = mysql_query("SELECT * FROM paciente ");
+    if(mysql_num_rows($sql) == 1){
+        $row = mysql_fetch_array($sql);
+        session_start();
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['fname'] = $row['first_name'];
+        $_SESSION['lname'] = $row['last_name'];
+        $_SESSION['logged'] = TRUE;
+        header("Location: user_page.php"); // A la página a la que tenemos que ir
+        exit;
+    }else{
+        header("Location: noticias.php");
+        exit;
     }
-    
-else
-    echo "Usuario o Contraseña incorrectos";?>
+}else{    //Si no se ha mandado nada, volvemos al index o la página del login
+    header("Location: promociones.php");
+    exit;
+}
+?>
