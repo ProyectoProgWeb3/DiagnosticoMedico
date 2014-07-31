@@ -11,6 +11,26 @@ echo <<< HERE
 		<li><a href="empresa.php">La Empresa</a></li>
 	</ul>	
 </nav>
+<!-- xxxxxxxxxxxxxxxxxx   para menu desplegable  xxxxxxxxxxxxxxxxxxxxxxxx -->
+<script language="javascript" src="M_S/CSS_Menu/jquery-1.3.min.js"></script>
+<script src="SpryAssets/SpryEffects.js" type="text/javascript"></script><script type="text/javascript">
+function mainmenu(){
+$(" #nav1 ul ").css({display: "none"});
+$(" #nav1 li").hover(function(){
+	$(this).find('ul:first:hidden').css({visibility: "visible",display: "none"}).slideDown(400);
+	},function(){
+		$(this).find('ul:first').slideUp(400);
+	});
+}
+$(document).ready(function(){
+	mainmenu();
+});xxxxx -->
+
+</script>
+<link href="M_S/CSS_Menu/style.css" rel="stylesheet" type="text/css">
+
+<!-- xxxxxxxxxxxxxxxxxx         menu desplegable  xxxxxxxxxxxxxxxxxxxxxxxx -->
+
 HERE;
 
 ?>
