@@ -19,6 +19,7 @@
 				</nav></a>
 	</div>
 	
+	
 	<div id="contenedor_derecho" class="grid_20">
 	<?php include('banner.php'); ?> 
 	<div class="clear"></div>
