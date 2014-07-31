@@ -4,7 +4,7 @@ echo <<< HERE
 <div id="slider1">
   <div class="slider-wrapper theme-default">
     <div id="slider" class="nivoSlider"> <img src="M_S/Images/toystory.jpg" data-thumb="M_S/Images/toystory.jpg" alt="" /> <img src="M_S/Images/up.jpg" data-thumb="M_S/Images/up.jpg" alt="" title="Somos responsables de tu salud!" /></a> <img src="M_S/Images/walle.jpg" data-thumb="M_S/Images/walle.jpg" alt="" data-transition="slideInLeft" /> <img src="M_S/Images/nemo.jpg" data-thumb="M_S/Images/nemo.jpg" alt="" title="#htmlcaption" /> </div>
-    <div id="htmlcaption" class="nivo-html-caption"> <strong></strong> Contamos con cobertura a nivel nacional..! <em></em> de nuestros platos.... </div>
+    <div id="htmlcaption" class="nivo-html-caption"> <strong></strong> Contamos con cobertura a nivel nacional..! <em></em> .. </div>
   </div>
 </div>
 
