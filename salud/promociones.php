@@ -6,20 +6,18 @@
 	<div class="clear"></div>
 	<?php include('menu.php'); ?>
 	<div class="clear"></div>
-	
-	<div id="contenedor_izquierdo" class="grid_4">
-				<nav id="iniciar_sesion" class="grid_4">
-				<a href="iniciar.php">Iniciar Sesion</a>
-				&nbsp;
-				<a href="registro.php">Registro</a>
-				</nav>
-				<nav id="consulta" class="grid_4">
-				<a href="consultas.php">Consultas</a>
-				</nav>
-				<nav id="promociones" class="grid_4">
-				<a href="promociones.php">Promociones</a>
-				</nav>
-	</div>
+
+    <div id="contenedor_izquierdo" class="grid_4">
+        <a href="registro.php"><nav id="iniciar_sesion" class="btn btn-lg btn-primary">
+                Registro
+            </nav></a>
+        <a href="consultas.php"><nav id="consulta" class="btn btn-lg btn-success">
+                Consultas
+            </nav></a>
+        <a href="promociones.php"><nav id="promociones" class="btn btn-lg btn-warning">
+                Promociones
+            </nav></a>
+    </div>
 	
 	<div id="contenedor_derecho" class="grid_20">
 	
