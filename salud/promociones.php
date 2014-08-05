@@ -22,7 +22,7 @@
 	<div id="contenedor_derecho" class="grid_20">
 	
 		<br>
-		<p><img id="noticias" src="img/aspirina.jpg"/ align="left">
+		<p><img id="empresas" src="img/aspirina.jpg"/ align="left">
 		<b>50% de Descuento</b>
 		<br>
 		<br>
@@ -31,7 +31,7 @@
 		</p>
 		<br>
 		
-		<p align="right"><img id="noticias" src="img/lemonflu.jpg"/ align="right">
+		<p align="right"><img id="empresas" src="img/lemonflu.jpg"/ align="right">
 		<b>20% de Descuento</b>
 		<br>
 		<br>
@@ -40,7 +40,7 @@
 		</p>
 		<br>
 		
-		<p align="left"><img id="noticias" src="img/berocca.jpg"/ align="left">
+		<p align="left"><img id="empresas" src="img/berocca.jpg"/ align="left">
 		<b>30% de Descuento</b>
 		<br>
 		<br>
