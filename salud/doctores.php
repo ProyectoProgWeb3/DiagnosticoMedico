@@ -23,7 +23,7 @@
 	
 	<div id="contenedor_derecho" class="grid_20">
 	
-		<p><img id="noticias" src="img/drgoku.jpg"/ align="left">
+		<p><img id="empresas" src="img/drgoku.jpg"/ align="left">
 		<br>
 		<b>Doctor Goku</b>
 		<br>
@@ -33,7 +33,7 @@
 		<br>
 		
 		
-		<p align="right"><img id="noticias" src="img/drhouse.jpg"/ align="right">
+		<p align="right"><img id="empresas" src="img/drhouse.jpg"/ align="right">
 		<br>
 		<b>Doctor House</b>
 		
@@ -43,7 +43,7 @@
 		</p>
 		<br>
 		
-		<p align="left"><img id="noticias" src="img/droctopus.jpg"/ align="left">
+		<p align="left"><img id="empresas" src="img/droctopus.jpg"/ align="left">
 		<br>
 		<b>Doctor Octopus</b>
 		<br>
@@ -54,7 +54,7 @@
 		<br>
 		
 		
-		<p align="right"><img id="noticias" src="img/drmengueche.jpg"/ align="right">
+		<p align="right"><img id="empresas" src="img/drmengueche.jpg"/ align="right">
 		<br>
 		<b>Doctor Mengeche</b>
 		
