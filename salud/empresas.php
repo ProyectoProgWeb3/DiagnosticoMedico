@@ -23,40 +23,21 @@
 	
 	<div id="contenedor_derecho" class="grid_20">
 	
-		<p><img id="logos" src="img/ecuasanitas.jpg"/ align="left">
-		<br>
-		<b>Ecuasanitas</b>
-		<br>
-		Lider en Servicios de seguros Medicos<br>
-		a nivel nacional<br>
-		
-		</p>
-		<br>
-		
-		
-		<p align="right"><img id="logos" src="img/fybeca.jpg"/ align="right">
-		<br>
-		<b>Fybeca</b>
-		
-		<br>
-		Encuentra todo lo que necesitas<br>
-		en un solo lugar<br>
-		
-		</p>
-		<br>
-		
-		<p align="left"><img id="logos" src="img/pharmacys.jpg"/ align="left">
-		<br>
-		<b>Pharmacys</b>
-		<br>
-		Brindando un servicio de primera<br>
-		a toda tu familia<br>
-		
-		</p>
-		
-	
-		
-		
+		<?php
+		include_once("EmpresasCollector.php");
+
+		$id =1;
+
+		$EmpresasCollectorObj = new EmpresasCollector();
+
+		foreach ($EmpresasCollectorObj->showEmpres() as $c){
+		  echo "<div>";
+		  echo $c->getidempresas() . "  && " .$c->getnombre();                                     
+		  echo "</div>"; 
+		}
+
+
+		?>
 		
 	
 	
