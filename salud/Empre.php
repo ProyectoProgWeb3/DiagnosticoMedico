@@ -4,10 +4,12 @@ class Empre
 {
     private $idempresas;
     private $nombre;
+    private $foto;
     
-     function __construct($idempresas, $nombre) {
+     function __construct($idempresas, $nombre, $foto) {
        $this->idempresas = $idempresas;
        $this->nombre = $nombre;
+       $this->foto = $foto;
      }
     
      function setidempresas($idempresas){
@@ -21,6 +23,12 @@ class Empre
      } 
      function getNombre(){
        return $this->nombre;
+     }
+     function setFoto($foto){
+       $this->foto = $foto;
+     } 
+     function getFoto(){
+       return $this->foto;
      } 
 }
 

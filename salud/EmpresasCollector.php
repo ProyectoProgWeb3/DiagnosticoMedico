@@ -10,7 +10,7 @@ class EmpresasCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM empresas ");        
     $arrayEmpre= array();        
     foreach ($rows as $c){
-      $aux = new Empre($c{'idempresas'},$c{'nombre'});
+      $aux = new Empre($c{'idempresas'},$c{'nombre'},$c{'foto'});
       array_push($arrayEmpre, $aux);
     }
     return $arrayEmpre;        

@@ -30,12 +30,15 @@
 
 		foreach ($EmpresasCollectorObj->showEmpres() as $c){
 		  echo "<div>";
-		  echo $c->getidempresas() . "  && " .$c->getnombre();                                     
+
+		  echo '<img id="logos" src='.$c->getfoto().'></img>';
+		  echo $c->getidempresas() . "   " .$c->getnombre();                                    
 		  echo "</div>"; 
 		}
 
 
 		?>
+
 		
 	
 	
