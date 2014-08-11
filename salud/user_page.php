@@ -1,8 +1,12 @@
 <?php
+
 session_start();
-if(!$_SESSION['logged']){
-    header("Location:socios.php");
+if(!$_SESSION['sesion_usuario']){
+    header("Location:iniciar.php");
     exit;
 }
-echo 'Welcome, '.$_SESSION['username'];
+
+header("Location:histo.php");
+echo 'Hola Bienvenido, '.$_SESSION['sesion_usuario'];
+    exit;
 ?>

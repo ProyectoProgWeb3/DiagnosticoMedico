@@ -1,5 +1,8 @@
 <html>
-<?php include('metadatos.php');?>
+<?php 
+include('metadatos.php');
+
+?>
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 </head>
@@ -25,15 +28,12 @@
 		<div >
 		   <br>
 		   <br>
-		    <label>Acceso a Pacientes </label>
-		    <p></p> 
-		    <form method="post" action="logueo.php" autocomplete="off">
-		    Usuario:<br>
-		    <input type="text" name="nombUsuario" id="nombUsuario" title="Ingresa tu usuario"><br><br>
-		    Contraseña:<br>
-		    <input type="password" name="pass" id="pass" title="Ingresa tu contraseña"><br><br>
-		    <input type="submit" name="submit" value="Ingresar">
-		</form>
+		    <label>Historia Clinica </label>
+		    <p></p>  
+		    <?php 
+		    session_start();
+			echo 'Hola Bienvenido, '.$_SESSION['sesion_usuario'];
+			?>
 	   </div>
 	</div>
 	<div></div>
