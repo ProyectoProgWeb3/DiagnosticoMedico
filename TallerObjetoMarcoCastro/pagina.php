@@ -8,7 +8,7 @@ $PersonaCollectorObj = new PersonaCollector();
 
 
 echo "<table>";
-foreach ($PersonaCollectorObj->showPersonas() as $c){
+foreach ($PersonaCollectorObj->mostrarPersonas() as $c){
   echo "<tr>";
     echo "<td>";
   echo $c->getidPersona() . "  || " .$c->getNombre();
@@ -17,5 +17,16 @@ foreach ($PersonaCollectorObj->showPersonas() as $c){
 }
 echo "</table>";
 
+
+$data = Array (
+    "nombre" => "Jon",
+    "apellido" => "John",
+    "sexo" => '1',
+    "fechanac" => "06/06/2000",
+    "direccion" => 'Quito',
+);
+$PersonaCollectorObj->insertarRegistro($data);
+if($id)
+    echo 'Persona fue creado. Id='.$id;
 
 ?>

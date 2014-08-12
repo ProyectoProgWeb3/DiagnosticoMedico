@@ -6,7 +6,7 @@ include_once('Collector.php');
 class PersonaCollector extends Collector
 {
   
-  function showPersonas() {
+  function mostrarPersonas() {
     $rows = self::$db->getRows("SELECT * FROM persona ");
     $arrayPersona= array();
     foreach ($rows as $c){
@@ -14,6 +14,9 @@ class PersonaCollector extends Collector
       array_push($arrayPersona, $aux);
     }
     return $arrayPersona;
+  }
+  function insertarRegistro($parametros){
+      self::$db->insertRow("insert into persona values ",$parametros);
   }
 
 }

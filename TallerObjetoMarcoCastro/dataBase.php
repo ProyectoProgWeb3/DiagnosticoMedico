@@ -59,6 +59,17 @@ class dataBase
       throw new Exception($e->getMessage());
     }           
   }
+    public function insert($tableName, $insertData)
+    {
+        if ($this->isSubQuery)
+            return;
+        $this->_query = "INSERT into " .self::$_prefix . $tableName;
+        $stmt = $this->_buildQuery(null, $insertData);
+        $stmt->execute();
+        $this->_stmtError = $stmt->error;
+        $this->reset();
+        return ($stmt->affected_rows > 0 ? $stmt->insert_id : false);
+    }
 
   public function updateRow($query, $params){
     return $this->insertRow($query, $params);
