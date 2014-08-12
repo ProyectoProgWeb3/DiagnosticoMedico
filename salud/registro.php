@@ -45,12 +45,12 @@
 										</tr>
 										<tr>
                                         <td><label for="contraseña">Contrase&ntilde;a</label></td>
-                                        <td><input tabindex="2" type="text" name="contrasenia" id="contrasenia" class="txtBox" value="" /></td>
+                                        <td><input tabindex="2" type="password" name="contrasenia" id="contrasenia" class="txtBox" value="" /></td>
                                         
 										</tr>
 										<tr>
                                         <td><label for="contraseña">Repetir Contrase&ntilde;a</label></td>
-                                        <td><input tabindex="3" type="text" name="contrasena" id="contrasena" class="txtBox" value="" /></td>
+                                        <td><input tabindex="3" type="password" name="recontrasenia" id="recontrasenia" class="txtBox" value="" /></td>
                                         
 										</tr>
 										<tr>
