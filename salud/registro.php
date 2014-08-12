@@ -30,7 +30,7 @@
 				<div class="col-2-3">
 					<div class="contenedor_registro">
 						<article>
-                            <form action="registrado.php" method="post" name="contact">
+                            <form action="registrar.php" method="post" name="contact">
 
 
                                 <div class="nuevo_registro">
@@ -45,7 +45,7 @@
 										</tr>
 										<tr>
                                         <td><label for="contraseña">Contrase&ntilde;a</label></td>
-                                        <td><input tabindex="2" type="text" name="contrasena" id="contrasena" class="txtBox" value="" /></td>
+                                        <td><input tabindex="2" type="text" name="contrasenia" id="contrasenia" class="txtBox" value="" /></td>
                                         
 										</tr>
 										<tr>
