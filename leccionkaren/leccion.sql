@@ -1,0 +1,1 @@
+SELECT * FROM leccion.notas;

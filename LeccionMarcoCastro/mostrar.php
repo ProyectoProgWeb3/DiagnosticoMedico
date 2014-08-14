@@ -19,6 +19,25 @@ $PersonaCollectorObj = new PersonaCollector();
 
 
 echo ("<table class=\"table table-striped\"");
+echo "<tr>";
+
+echo "<td>";
+echo "Nombre";
+echo "</td>";
+echo "<td>";
+echo "Materia";
+echo "</td>";
+echo "<td>";
+echo "Parcial1";
+echo "</td>";
+echo "<td>";
+echo "Parcial2";
+echo "</td>";
+echo "<td>";
+echo "Promedio";
+echo "</td>";
+
+echo "</tr>";
 
 foreach ($PersonaCollectorObj->mostrarPersonas() as $c){
     echo "<tr>";
