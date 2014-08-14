@@ -1,0 +1,13 @@
+
+<?php
+if(isset($_REQUEST['calcular']))
+{
+$promedio= (($_REQUEST['nota1'] + $_REQUEST['nota2'] + $_REQUEST['nota3'] + $_REQUEST['nota4'])/4) ;
+ echo "nota1 es:".$_REQUEST['nota1']."<br>";
+ echo "nota2 es:".$_REQUEST['nota2']."<br>";
+ echo "nota3 es:".$_REQUEST['nota3']."<br>";
+ echo "nota4 es:".$_REQUEST['nota4']."<br>";
+ echo "El promedio es:".$promedio;
+ }
+?>
+

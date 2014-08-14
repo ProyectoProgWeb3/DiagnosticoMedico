@@ -1,0 +1,15 @@
+<?php
+include_once("LeccionCollector.php");
+
+
+$LeccionCollectorObj = new LeccionCollector();
+
+foreach ($LeccionCollectorObj->showDemos() as $c){
+  echo "<div>";
+  echo $c->getid(). "  && " .$c->getlogin();                                     
+  echo "</div>"; 
+}
+
+
+?>
+

@@ -1,0 +1,40 @@
+<?php
+
+class Paciente
+{
+    private $id;
+    private $nombre;
+    private $parcial;
+    private $final;
+    private $mejoramiento;
+    
+     function __construct($id, $nombre,$parcial, $final, $mejoramiento ) 
+     {
+       $this->id = $id;
+       $this->nombre = $nombre;
+       $this->parcial = $parcial; 
+       $this->final = $final; 
+       $this->mejoramiento = $mejoramiento;        
+   
+     }
+    
+     function setcodpaciente($codpaciente){
+       $this->codpaciente = $codpaciente;
+     } 
+     
+     function getcodpaciente(){
+       return $this->codpaciente;
+     } 
+     
+    function setlogin($login){
+       $this->login = $login;
+     } 
+     
+     function getlogin(){
+       return $this->login;
+     }      
+   
+}
+
+?> 
+

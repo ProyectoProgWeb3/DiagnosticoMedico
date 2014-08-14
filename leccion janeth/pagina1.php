@@ -10,38 +10,35 @@ echo <<< HERE
 
 </head>
 HERE;
-include_once("AlumnoCollector.php");
-
-$id =1;
-
-$PersonaCollectorObj = new PersonaCollector();
+include_once("LeccionCollector.php");
 
 
+$LeccionCollectorObj = new LeccionCollector();
 
-echo ("<table class=\"table table-striped\"");
-
-foreach ($PersonaCollectorObj->mostrarPersonas() as $c){
-    echo "<tr>";
+foreach ($LeccionCollectorObj->showDemos() as $c){
+  echo "<div>";
+  echo $c->getid(). "  && " .$c->getlogin();                                     
+  echo "</div>"; 
+   echo "<tr>";
 
     echo "<td>";
     echo $c->getNombre();
     echo "</td>";
+   
     echo "<td>";
-    echo $c->getmateria();
+    echo $c->getparcial();
     echo "</td>";
     echo "<td>";
-    echo $c->getparcial1();
+    echo $c->getfinal();
     echo "</td>";
     echo "<td>";
-    echo $c->getparcial2();
-    echo "</td>";
-    echo "<td>";
-    echo ($c->getparcial1()+$c->getparcial2())/2;
+    echo ($c->getparcial()+$c->getfinal())/2;
     echo "</td>";
 
     echo "</tr>";
 }
 echo "</table>";
+}
 
 
 ?>
