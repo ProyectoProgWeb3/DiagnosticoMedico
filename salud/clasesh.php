@@ -4,10 +4,10 @@ require_once ("conexion.php");
 
 class Clases
 {
- public function login( $usuario, $pass ){
+ public function login( $paciente){
 
   // 
-  $sql= "SELECT * FROM paciente WHERE login ='".$usuario."' AND passw ='".$pass."'";
+  $sql= "SELECT * FROM historia WHERE paciente ='".$paciente."'";
 
   // se ejectua la consulta y se usa el metodo con de la clase class para la conexion, y se guarda en $res lo que devuelve la consulta  
   $res=mysql_query( $sql, Conectar::con() );
@@ -22,7 +22,7 @@ class Clases
   }else{
 
    // de lo contrario se guarda en un arrar lo que devuelve la consulta
-   if( $reg = mysql_fetch_array( $res ) ){ 
+   if( $reg = mysql_fetch_array( $res ) ){
     
     // se crean dos sesiones, una para mostrar el nombre de usuario del sistema y la otra para guardar en las tablas lo que realiza el usuario del sistema (integridad referencial)
     $_SESSION["sesion_usuario"] = $reg["login"];
