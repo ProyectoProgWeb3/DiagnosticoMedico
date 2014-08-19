@@ -165,12 +165,14 @@ DROP TABLE IF EXISTS `paciente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `paciente` (
-  `codpaciente` int(11) NOT NULL,
+  `codpaciente` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incremento id de cada paciente, indice unico',
   `persona` int(11) DEFAULT NULL,
-  `tiposangre` varchar(45) DEFAULT NULL,
-  `login` varchar(45) DEFAULT NULL,
-  `passw` varchar(45) DEFAULT NULL,
+  `email` varchar(64) NOT NULL COMMENT 'email del paciente, unico',
+  `usuarioid` varchar(64) NOT NULL COMMENT 'nombre del usuario, unico',
+  `clavehash` varchar(255) NOT NULL COMMENT 'clave del usuario con algoritmo hash',
   PRIMARY KEY (`codpaciente`),
+  UNIQUE KEY `usuarioid` (`usuarioid`),
+  UNIQUE KEY `email` (`email`),
   KEY `fk_paciente_1_idx` (`persona`),
   CONSTRAINT `fk_paciente_1` FOREIGN KEY (`persona`) REFERENCES `persona` (`codpersona`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

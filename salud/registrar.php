@@ -1,107 +1,28 @@
-<html>
-<?php include('metadatos.php');?>
-<body>
-<div class="container_24">
-	<?php include('header.php'); ?>
-	<div class="clear"></div>
-	<?php include('menu.php'); ?>
-	<div class="clear"></div>
+<?php
 
-    <div id="contenedor_izquierdo" class="grid_4">
-        <a href="registrar.php"><nav id="iniciar_sesion" class="btn btn-lg btn-primary">
-                Registro
-            </nav></a>
-        <a href="consultas.php"><nav id="consulta" class="btn btn-lg btn-success">
-                Consultas
-            </nav></a>
-        <a href="promociones.php"><nav id="promociones" class="btn btn-lg btn-warning">
-                Promociones
-            </nav></a>
-    </div>
-	
-	<div id="contenedor_derecho" class="grid_20">
-		
-		
-		
-		<div class="contenedor_registro">
-			<div class="row block05" align="center">
-			
-				<div class="titulo"><h2>Registro de Usuario</h2></div>
-				<div class="col-2-3">
-					<div class="contenedor_registro">
-						<article>
-                            <form action="registrar.php" method="post" name="contact">
+/**
+ * Registro de Usuario
 
+ */
 
-                                <div class="nuevo_registro">
-                                    <h3>Datos Personales</h3>
+// comprobando versión mínima de PHP
+if (version_compare(PHP_VERSION, '5.3.7', '<')) {
+    exit("Lo sentimos, la sesión PHP no se ejecuta en una versión menor que PHP 5.3.7!");
+} else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
+    // si se está usando PHP 5.3 o PHP 5.4 se tiene que incluir password_api_compatibility_library.php
+    // (esta biblioteca agrega las funciones de hash de contraseñas  de PHP5.5 para las versiones anteriores de PHP)
+    require_once("librerias/password_compatibility_library.php");
+}
 
-                                    <div class="leftCol">
-									<table>
-										<tr>
-                                        <td><label for="usuario">Nombre de Usuario</label></td>
-                                        <td><input tabindex="1" type="text" name="usuarioId" id="usuarioId" class="txtBox" value="" /></td>
-                                        
-										</tr>
-										<tr>
-                                        <td><label for="contraseña">Contrase&ntilde;a</label></td>
-                                        <td><input tabindex="2" type="password" name="clave" id="clave" class="txtBox" value="" /></td>
-                                        
-										</tr>
-										<tr>
-                                        <td><label for="contraseña">Repetir Contrase&ntilde;a</label></td>
-                                        <td><input tabindex="3" type="password" name="claveRepetir" id="claveRepetir" class="txtBox" value="" /></td>
-                                        
-										</tr>
-										<tr>
-                                        <td><label for="nombres">Nombres</label></td>
-                                        <td><input tabindex="4" type="text" name="nombres" id="nombres" class="txtBox" value="" /></td>
-                                        
-										</tr>
-										<tr>
-                                        <td><label for="apellidos">Apellidos</label></td>
-                                        <td><input tabindex="5" type="text" name="apellidos" id="apellidos" class="txtBox" value="" /></td>
-                                        
-										</tr>
-										<tr>
-                                        <td><label for="nacimiento" style="padding-right: 0; width: 140px" >Fecha de nacimiento</label></td>
-                                        <td><input tabindex="6" type="date" name="nacimiento" min="1913-01-01" max="2014-07-07"/></td>
-                                        
-										</tr>
-										<tr>
-                                        <td><label for="genero">Genero</label><br></td>
-                                        <td><input tabindex="7" type="radio" name="genero" value="masculino">Masculino<br></td>
-                                        <td><input tabindex="7" type="radio" name="genero" value="femenino">Femenino</td>
-                                        
-										</tr>
-										<tr>
-                                        <td><label for="email">E-mail</label></td>
-                                        <td><input tabindex="8" type="email" name="email" id="email" class="txtBox" value="" /></td>
-                                        
-										</tr>
+// incluir las configuraciones / constantes para la conexión de base de datos
+require_once("configuracion/bd.php");
 
-                                    </div>
-									
-									</table>
-                                </div>
-                                <p align="center"><input type="submit" class="button" value="Enviar" name="submit"></p>
-                            </form>
-						</article>
-					</div>
-				</div>
-						
-			</div>		
-			
-	
-			
-		</div>
-	
-	
-	</div>
-	
-	<div class="clear"></div>
-	<?php include('footer.php'); ?>
-	
-</div>
-</body>
-</html>
+// cargar la clase Registro
+require_once("clases/Registro.php");
+
+// crear el objeto de Registro. cuando se crea este objeto, hará todas las cosas de Registro automáticamente
+// por lo que esta sola línea se encarga de todo el proceso de Registro de nuevo usuario.
+$registro = new Registro();
+
+// mostrar la vista de registro (con el formulario de Registro y Mensajes/Errores)
+include("vistas/registrar.php");

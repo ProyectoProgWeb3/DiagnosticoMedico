@@ -88,14 +88,14 @@ class Registro
                 $claveHash = password_hash($clave, PASSWORD_DEFAULT);
 
                 // comprobar si ya existe de usuario o dirección de correo electrónico
-                $sql = "SELECT * FROM users WHERE user_name = '" . $usuarioId . "' OR user_email = '" . $email . "';";
+                $sql = "SELECT * FROM paciente WHERE usuarioid = '" . $usuarioId . "' OR email = '" . $email . "';";
                 $query_check_user_name = $this->conexionBd->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
                     $this->errores[] = "Lo sentimos, ese nombre de usuario / correo electrónico ya está en uso.";
                 } else {
                     // escribir datos nuevos de usuario en la base de datos
-                    $sql = "INSERT INTO users (user_name, user_password_hash, user_email)
+                    $sql = "INSERT INTO paciente (usuarioid, clavehash, email)
                             VALUES('" . $usuarioId . "', '" . $claveHash . "', '" . $email . "');";
                     $query_new_user_insert = $this->conexionBd->query($sql);
 
