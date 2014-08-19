@@ -1,78 +1,107 @@
-<?php
-class register
-{
-    public $user;
-    public $contrasenia;
-    public $recontrasenia;
-    public $email;
-    public $nombres;
-    public $consulta;
-    public $numrows;
-    public $error;
-    public $error2;
-    public $error3;
-    public $error4;
-    public $ok;
-    public $fields;
-    public $regconsulta;
+<html>
+<?php include('metadatos.php');?>
+<body>
+<div class="container_24">
+	<?php include('header.php'); ?>
+	<div class="clear"></div>
+	<?php include('menu.php'); ?>
+	<div class="clear"></div>
 
-    public function __construct($usuario, $contrasenia, $repeatcontrasenia,  $email, $nombres)
-    {
-        include "config.php";
-        $this->user         =    $usuario;
-        $this->contrasenia        =    $contrasenia;
-        $this->recontrasenia    =    $repeatcontrasenia;
-        $this->email        =    $email;
-        $this->nombres        =    $nombres;
-        $this->consulta        =    mysql_consulta("SELECT * FROM users WHERE usuario = '".$this->user."'");
-        $this->numrows        =    mysql_num_rows($this->consulta);
-        $this->error        =    "Nombre de usuario en uso.";
-        $this->error2        =    "Las contraseñas no coinciden";
-        $this->error3        =    "Nombre completo y/o nombre de usuarios superan los 25 caracteres.";
-        $this->error4        =    "La contraseña debe tener un minimo de 6 caracteres y un maximo de 25";
-        $this->ok            =    "Te has registrado correctamente";
-        $this->fields        =    "Por favor, rellena todos los campos.";
-    }
-    public function check()
-    {
-        if($this->numrows!=0)
-        {
-            die ($this->error);
-        }
-        if($this->user&&$this->contrasenia&&$this->email&&$this->nombres)
-        {
-            if($this->contrasenia == $this->recontrasenia)
-            {
-                if(strlen($this->usuario)>25||strlen($this->nombres)>25)
-                {
-                    echo $this->error3;
-                }
-                else
-                {
-                    if(strlen($this->contrasenia)>25||strlen($this->contrasenia)<6)
-                    {
-                        echo $this->error4;
-                    }
-                    else
-                    {
-                        $this->contrasenia = md5($this->contrasenia);
-                        $register = mysql_consulta("INSERT INTO `users` (`id`, `nombres`, `usuario`, `contrasenia`, `email`, `admin`) VALUES (NULL, '".$this->nombres."', '".$this->user."', '".$this->contrasenia."', '".$this->email."', '0')");
-                        echo $this->ok;
-                    }
-                }
-            }
-            else
-            {
-                echo $this->error2;
-            }
-        }
-        else
-        {
-            echo $this->fields;
-        }
-    }
-}
-include_once "limpiar.php";
-$reg = new register(clear($_POST['usuario']), clear($_POST['contrasenia']), clear($_POST['repeatcontrasenia']), clear($_POST['email']), clear($_POST['nombres']));
-echo $reg->check();
-?>
+    <div id="contenedor_izquierdo" class="grid_4">
+        <a href="registrar.php"><nav id="iniciar_sesion" class="btn btn-lg btn-primary">
+                Registro
+            </nav></a>
+        <a href="consultas.php"><nav id="consulta" class="btn btn-lg btn-success">
+                Consultas
+            </nav></a>
+        <a href="promociones.php"><nav id="promociones" class="btn btn-lg btn-warning">
+                Promociones
+            </nav></a>
+    </div>
+	
+	<div id="contenedor_derecho" class="grid_20">
+		
+		
+		
+		<div class="contenedor_registro">
+			<div class="row block05" align="center">
+			
+				<div class="titulo"><h2>Registro de Usuario</h2></div>
+				<div class="col-2-3">
+					<div class="contenedor_registro">
+						<article>
+                            <form action="registrar.php" method="post" name="contact">
+
+
+                                <div class="nuevo_registro">
+                                    <h3>Datos Personales</h3>
+
+                                    <div class="leftCol">
+									<table>
+										<tr>
+                                        <td><label for="usuario">Nombre de Usuario</label></td>
+                                        <td><input tabindex="1" type="text" name="usuarioId" id="usuarioId" class="txtBox" value="" /></td>
+                                        
+										</tr>
+										<tr>
+                                        <td><label for="contraseña">Contrase&ntilde;a</label></td>
+                                        <td><input tabindex="2" type="password" name="clave" id="clave" class="txtBox" value="" /></td>
+                                        
+										</tr>
+										<tr>
+                                        <td><label for="contraseña">Repetir Contrase&ntilde;a</label></td>
+                                        <td><input tabindex="3" type="password" name="claveRepetir" id="claveRepetir" class="txtBox" value="" /></td>
+                                        
+										</tr>
+										<tr>
+                                        <td><label for="nombres">Nombres</label></td>
+                                        <td><input tabindex="4" type="text" name="nombres" id="nombres" class="txtBox" value="" /></td>
+                                        
+										</tr>
+										<tr>
+                                        <td><label for="apellidos">Apellidos</label></td>
+                                        <td><input tabindex="5" type="text" name="apellidos" id="apellidos" class="txtBox" value="" /></td>
+                                        
+										</tr>
+										<tr>
+                                        <td><label for="nacimiento" style="padding-right: 0; width: 140px" >Fecha de nacimiento</label></td>
+                                        <td><input tabindex="6" type="date" name="nacimiento" min="1913-01-01" max="2014-07-07"/></td>
+                                        
+										</tr>
+										<tr>
+                                        <td><label for="genero">Genero</label><br></td>
+                                        <td><input tabindex="7" type="radio" name="genero" value="masculino">Masculino<br></td>
+                                        <td><input tabindex="7" type="radio" name="genero" value="femenino">Femenino</td>
+                                        
+										</tr>
+										<tr>
+                                        <td><label for="email">E-mail</label></td>
+                                        <td><input tabindex="8" type="email" name="email" id="email" class="txtBox" value="" /></td>
+                                        
+										</tr>
+
+                                    </div>
+									
+									</table>
+                                </div>
+                                <p align="center"><input type="submit" class="button" value="Enviar" name="submit"></p>
+                            </form>
+						</article>
+					</div>
+				</div>
+						
+			</div>		
+			
+	
+			
+		</div>
+	
+	
+	</div>
+	
+	<div class="clear"></div>
+	<?php include('footer.php'); ?>
+	
+</div>
+</body>
+</html>
