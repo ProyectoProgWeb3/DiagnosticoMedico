@@ -6,9 +6,10 @@ class Empre
     private $nombre;
     private $foto;
     
-     function __construct($idempresas, $nombre) {
+     function __construct($idempresas, $nombre, $foto) {
        $this->idempresas = $idempresas;
        $this->nombre = $nombre;
+       $this->foto = $foto;
      }
     
      function setIdempresas($idempresas){

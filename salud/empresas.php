@@ -28,11 +28,11 @@
 
 		$EmpresasCollectorObj = new EmpresasCollector();
 
-		foreach ($EmpresasCollectorObj->showEmpres() as $c){
+		foreach ($EmpresasCollectorObj->showEmprePagina() as $c){
 		  echo "<div>";
 
-		  echo '<img id="logos" src='.$c->getfoto().'></img>';
-		  echo $c->getidempresas() . "   " .$c->getnombre();                                    
+		  echo '<img id="logos" src='.$c->getFoto().'></img>';
+		  echo $c->getIdempresas() . "   " .$c->getNombre();                                    
 		  echo "</div>"; 
 		}
 
