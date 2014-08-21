@@ -27,7 +27,7 @@ class EmpresasCollector extends Collector
   }
   
   function updateEmpre($id,$nombre) {    
-    $insertrow = self::$db->updateRow("UPDATE proyecto.empresas SET proyecto.empresas = ?  WHERE proyecto.empresas = ? ", array( "{$nombre}",$id));
+    $insertrow = self::$db->updateRow("UPDATE proyecto.empresas SET empresas.nombre = ?  WHERE empresas.idempresas = ? ", array( "{$nombre}",$id));
   }  
 
   function deleteEmpre($id) {    

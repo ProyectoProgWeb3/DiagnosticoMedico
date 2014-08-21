@@ -95,14 +95,7 @@ html {
     text-decoration: none;
 }
 
-#menu ul li a:hover, #menu ul li .seleccionado{
-    color: #000;	
-	line-height:39px;
-	border-top: 3px solid #747474;
-	padding-top:5px;	
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset;
-	background-color:#FBFBFB;
-}
+
 
 #menu li {
     cursor: pointer;
@@ -223,24 +216,4 @@ html {
 	}
  
  
-#contenedor_registro{
- background: -moz-linear-gradient(left, rgba(81,126,165,1) 0%, rgba(81,126,165,0.8) 15%, rgba(81,126,165,1) 19%, rgba(81,126,165,1) 20%, rgba(209,255,253,1) 50%, rgba(81,126,165,1) 81%, rgba(81,126,165,0.8) 85%, rgba(81,126,165,1) 100%); /* FF3.6+ */
- background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(81,126,165,1)), color-stop(15%,rgba(81,126,165,0.8)), color-stop(19%,rgba(81,126,165,1)), color-stop(20%,rgba(81,126,165,1)), color-stop(50%,rgba(209,255,253,1)), color-stop(81%,rgba(81,126,165,1)), color-stop(85%,rgba(81,126,165,0.8)), color-stop(100%,rgba(81,126,165,1))); /* Chrome,Safari4+ */
- background: -webkit-linear-gradient(left, rgba(81,126,165,1) 0%,rgba(81,126,165,0.8) 15%,rgba(81,126,165,1) 19%,rgba(81,126,165,1) 20%,rgba(209,255,253,1) 50%,rgba(81,126,165,1) 81%,rgba(81,126,165,0.8) 85%,rgba(81,126,165,1) 100%); /* Chrome10+,Safari5.1+ */
- background: -o-linear-gradient(left, rgba(81,126,165,1) 0%,rgba(81,126,165,0.8) 15%,rgba(81,126,165,1) 19%,rgba(81,126,165,1) 20%,rgba(209,255,253,1) 50%,rgba(81,126,165,1) 81%,rgba(81,126,165,0.8) 85%,rgba(81,126,165,1) 100%); /* Opera 11.10+ */
- background: -ms-linear-gradient(left, rgba(81,126,165,1) 0%,rgba(81,126,165,0.8) 15%,rgba(81,126,165,1) 19%,rgba(81,126,165,1) 20%,rgba(209,255,253,1) 50%,rgba(81,126,165,1) 81%,rgba(81,126,165,0.8) 85%,rgba(81,126,165,1) 100%); /* IE10+ */
- background: linear-gradient(to right, rgba(81,126,165,1) 0%,rgba(81,126,165,0.8) 15%,rgba(81,126,165,1) 19%,rgba(81,126,165,1) 20%,rgba(209,255,253,1) 50%,rgba(81,126,165,1) 81%,rgba(81,126,165,0.8) 85%,rgba(81,126,165,1) 100%); /* W3C */
- /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#001e5799',GradientType=0 ); /* IE6-9 */
 
-}
-
-#titulo{
- /*Apply this class to some text to unlock the secrets of the third dimension!*/
- font-family: Garamond, serif;
- line-height: 1em;
- color: #ff2424;
- font-weight:bold;
- font-size: 31px;
- text-shadow:0px 0px 0 rgb(202,-17,-17),1px 1px 0 rgb(158,-61,-61), 2px 2px 0 rgb(115,-104,-104),3px 3px 2px rgba(0,0,0,0.6),3px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
-}
-	

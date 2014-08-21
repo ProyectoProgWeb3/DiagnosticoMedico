@@ -1,5 +1,9 @@
 <html>
 <?php include('metadatos.php');?>
+<?php
+include_once("EmpresasCollector.php");
+$EmpresasCollectorObj = new EmpresasCollector();
+?>
 <body>
 <div class="container_24">
 	<?php include('header.php'); ?>
@@ -19,29 +23,21 @@
 				</nav></a>
 	</div>
 	
+	
 	<div id="contenedor_derecho" class="grid_20">
-	
+	<table>
+		<tr><td><a href="formularioDemoInsert.php">Nuevo</a></td></tr>
 		<?php
-		include_once("EmpresasCollector.php");
-
-		$id =1;
-
-		$EmpresasCollectorObj = new EmpresasCollector();
-
-		foreach ($EmpresasCollectorObj->showEmpres() as $c){
-		  echo "<div>";
-
-		  echo '<img id="logos" src='.$c->getfoto().'></img>';
-		  echo $c->getidempresas() . "   " .$c->getnombre();                                    
-		  echo "</div>"; 
+		foreach ($EmpresasCollectorObj->readEmpre() as $c){
+		  echo "<tr>";
+		  echo "<td>".$c->getIdempresas() ."</td>";
+		  echo "<td>".$c->getNombre()."</td>";
+		  echo "<td><a href='formularioDemoEditar.php?id=".$c->getIdempresas()."'>&nbsp editar &nbsp</a></td>";
+		  echo "<td><a href='eliminar.php?id=".$c->getIdempresas()."'>eliminar</a></td>"; 
+		  echo "</tr>"; 
 		}
-
-
 		?>
-
-		
-	
-	
+	</table> 
 	<div class="clear"></div>
 	</div>
 	
