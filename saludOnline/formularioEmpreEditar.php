@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>formulario Empresas</title>
+<title>Formulario Edicion de Empresas</title>
 </head>
 <body>
 
@@ -15,7 +15,7 @@ $EmpresasCollectorObj = new EmpresasCollector();
 $ObjEmpre = $EmpresasCollectorObj->showEmpre($id);
 ?>
 <h2>Editar Objeto Empresas </h2>
-<form action="editar.php" method="post" >
+<form action="editarEmpre.php" method="post" >
 <p>
 Id: <input type="text" name="idempresas" value="<?php echo $ObjEmpre->getIdempresas(); ?>" readonly />
 </p>

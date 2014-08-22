@@ -1,5 +1,7 @@
 <html>
 <head>
+<meta charset="utf-8" />
+<title>Editor de Empresas</title>
 </head>
 
 <body>

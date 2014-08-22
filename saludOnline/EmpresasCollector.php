@@ -40,7 +40,7 @@ class EmpresasCollector extends Collector
 	}  
 
 	function deleteEmpre($id) {    
-		$deleterow = self::$db->deleteRow("DELETE FROM a9144011_proyect.empresas WHERE idempresas= ?", array("{$id}"));
+		$deleterow = self::$db->deleteRow("DELETE FROM a9144011_proyect.empresas WHERE empresas.idempresas= ?", array("{$id}"));
 	}  
 
 

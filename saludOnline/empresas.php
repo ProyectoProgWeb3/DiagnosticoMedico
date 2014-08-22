@@ -24,7 +24,6 @@
 		<?php
 		include_once("EmpresasCollector.php");
 
-		$id =1;
 
 		$EmpresasCollectorObj = new EmpresasCollector();
 

@@ -1,8 +1,8 @@
 <html>
 <?php include('metadatos.php');?>
 <?php
-include_once("EmpresasCollector.php");
-$EmpresasCollectorObj = new EmpresasCollector();
+include_once("DoctoresCollector.php");
+$DoctoresCollectorObj = new DoctoresCollector();
 ?>
 <body>
 <div class="container_24">
@@ -26,16 +26,20 @@ $EmpresasCollectorObj = new EmpresasCollector();
 	
 	<div id="contenedor_derecho" class="grid_20">
 	<table>
-		<tr>
-		<td><a href="administracionEmpresas.php">Administracion de Empresas</a></td>
-		</tr>
-		<tr>
-		<td><a href="administracionMedicos.php">Administracion de Medicos</a></td>
-		</tr>
-		<tr>
-		<td>Administracion de Pacientes</td>
-		</tr>
+		<tr><td><a href="formularioDocInsert.php">Nuevo</a></td></tr>
+		<?php
+		foreach ($DoctoresCollectorObj->readDoc() as $c){
+		  echo "<tr>";
+		  echo "<td>".$c->getIdmedico() ."&nbsp</td>";
+		  echo "<td>".$c->getNombre()."&nbsp</td>";
+		  echo "<td>".$c->getEspecialidad()."&nbsp</td>";
+		  echo "<td><a href='formularioDocEditar.php?id=".$c->getIdmedico()."'>&nbsp editar &nbsp</a></td>";
+		  echo "<td><a href='eliminarDoc.php?id=".$c->getIdmedico()."'>eliminar</a></td>"; 
+		  echo "</tr>"; 
+		}
+		?>
 	</table>
+	<a href="administracion.php">Volver a Administracion</a>
 	<div class="clear"></div>
 	</div>
 	

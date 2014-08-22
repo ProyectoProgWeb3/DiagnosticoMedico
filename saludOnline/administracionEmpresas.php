@@ -26,18 +26,19 @@ $EmpresasCollectorObj = new EmpresasCollector();
 	
 	<div id="contenedor_derecho" class="grid_20">
 	<table>
-		<tr><td><a href="formularioDemoInsert.php">Nuevo</a></td></tr>
+		<tr><td><a href="formularioEmpreInsert.php">Nuevo</a></td></tr>
 		<?php
 		foreach ($EmpresasCollectorObj->readEmpre() as $c){
 		  echo "<tr>";
-		  echo "<td>".$c->getIdempresas() ."</td>";
-		  echo "<td>".$c->getNombre()."</td>";
-		  echo "<td><a href='formularioDemoEditar.php?id=".$c->getIdempresas()."'>&nbsp editar &nbsp</a></td>";
-		  echo "<td><a href='eliminar.php?id=".$c->getIdempresas()."'>eliminar</a></td>"; 
+		  echo "<td>".$c->getIdempresas() ."&nbsp</td>";
+		  echo "<td>".$c->getNombre()."&nbsp</td>";
+		  echo "<td><a href='formularioEmpreEditar.php?id=".$c->getIdempresas()."'>&nbsp editar &nbsp</a></td>";
+		  echo "<td><a href='eliminarEmpre.php?id=".$c->getIdempresas()."'>eliminar</a></td>"; 
 		  echo "</tr>"; 
 		}
 		?>
-	</table> 
+	</table>
+	<a href="administracion.php">Volver a Administracion</a>
 	<div class="clear"></div>
 	</div>
 	

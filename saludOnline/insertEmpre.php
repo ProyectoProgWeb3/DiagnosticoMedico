@@ -1,18 +1,20 @@
 <html>
 <head>
+<meta charset="utf-8" />
+<title>Creador de Empresas</title>
 </head>
 
 <body>
 <div id="main">
 <?php
-$valor=$_POST["nombre"];
+$nombre=$_POST["nombre"];
 //$valor="manuel";
-echo 'Hola ' . htmlspecialchars($valor) . '!';
+echo 'Hola ' . htmlspecialchars($nombre) . '!';
 
 include_once("EmpresasCollector.php");
 
 $EmpresasCollectorObj = new EmpresasCollector();
-$EmpresasCollectorObj->createEmpre($valor);
+$EmpresasCollectorObj->createEmpre($nombre);
 
 echo "valor agregado </br>";
 ?>
