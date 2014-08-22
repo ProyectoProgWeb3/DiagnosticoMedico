@@ -1,0 +1,18 @@
+La carpeta q se llama "saludOnline" es para mantener un respaldo del sitio en internet
+no modifiquen los archivos y/o valores por favor.
+
+
+Los archivos del proyecto los seguiremos subiendo 
+en la carpeta "salud" como hasta ahora.
+
+
+"Cualquier cambio que hagan al proyecto por favor pruebenlo y asegurense 
+q funciona todo muy bien antes de subir al gitHub".
+
+
+Asi mismo existe un archivo de texto q se llama "cambios" en el cual
+pondremos un resumen (como los de los commit) de lo que han cambiado
+asi podre realizar los cambios en la version online.
+
+
+Realizen respaldos de sus carpetas y archivos antes de subirlos por si las dudas

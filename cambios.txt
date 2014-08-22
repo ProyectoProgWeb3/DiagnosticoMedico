@@ -1,0 +1,3 @@
+- Pagina socios/empresas
+generacion de contenido dinamico
+generacion de imagen por defecto al momento de crear nuevo usuario
