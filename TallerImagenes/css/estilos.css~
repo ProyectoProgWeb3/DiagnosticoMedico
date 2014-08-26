@@ -1,0 +1,146 @@
+#cabecera{
+	background: url('../img/logo.png') no-repeat;  
+	height:150px;
+	
+}
+
+#menu{
+	background: url('../img/menu.png') no-repeat;
+	height:50px;
+}
+
+#menuTop{
+	background: url('../img/menu.png') no-repeat ;
+	height:20px;
+	width: 260px;
+	margin-left: 700px;
+	font-size: 12pt;
+} 
+
+#galeria{
+	background-color:#D5E0C3;
+	margin-bottom:10px;
+}
+
+#menu_secundario{
+
+}
+
+#ubiquenos{
+	
+}
+
+#redes_sociales{
+	
+}
+
+#contenedor_izquierdo{
+
+}
+
+#contenedor_derecho{
+
+}
+
+#pie_pagina{
+	background-color:#EAE491;
+	height:280px;
+	margin-top:10px;
+}
+
+#menu ul {
+    list-style: none outside none;
+	text-transform: uppercase;
+	float:right;
+	margin-top:0px;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a {
+    color: #575757;
+    display: inline;
+	float:left;
+    font-family: "Arial";
+    font-size: 13px;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menu ul li a:hover, #menu ul li .seleccionado{
+    color: #000;	
+	line-height:39px;
+	border-top: 3px solid #747474;
+	padding-top:5px;	
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset;
+	background-color:#FBFBFB;
+}
+
+#menu li {
+    cursor: pointer;
+    display: block;
+    font-size: 0.85em;
+    font-weight: normal;
+    height: 49px;
+    line-height: 49px;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+
+/*****************************************/
+
+
+#menuTop ul {
+    list-style: none outside none;
+	text-transform: uppercase;
+	float:right;
+	margin-top:0px;
+}
+
+#menuTop ul li {
+    display: inline;
+}
+
+#menuTop ul li a {
+    color: #575757;
+    display: inline;
+	float:left;
+    font-family: "Arial";
+    font-size: 13px;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menuTop ul li a:hover, #menuTop ul li .seleccionado{
+    color: #000;	
+	line-height:39px;
+	border-top: 3px solid #747474;
+	padding-top:5px;	
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset;
+	background-color:#FBFBFB;
+}
+
+#menuTop li {
+    cursor: pointer;
+    display: block;
+    font-size: 0.85em;
+    font-weight: normal;
+    height: 49px;
+    line-height: 49px;
+    margin: 0;
+    outline: medium none;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+    z-index: 100;
+}
+

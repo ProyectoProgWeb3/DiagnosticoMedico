@@ -1,0 +1,5 @@
+
+-Mejora de Css
+-Bootstrap en menus y elementos
+-Generacion de contenido en tiempo real mediante querys a la base de Datos
+-Framework "consulta en linea"
