@@ -21,8 +21,8 @@ class SociosCollector extends Collector
     return $Objsoci;
   }
 
-  function createsoci($nombre) {    
-    $insertrow = self::$db->insertRow("INSERT INTO proyecto.socios (idsocios, nombre, foto) VALUES (?, ?, ?)", array(null, "{$nombre}", "/salud/img/sesion.jpg"));
+  function createsoci($nombre,$foto) {    
+    $insertrow = self::$db->insertRow("INSERT INTO proyecto.socios (nombre, foto) VALUES (?, ?)", array( "{$nombre}", "{$foto}"));
   }  
 
   function readsoci() {

@@ -18,28 +18,28 @@ USE `proyecto`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `socios`
+-- Table structure for table `especialidad`
 --
 
-DROP TABLE IF EXISTS `socios`;
+DROP TABLE IF EXISTS `especialidad`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `socios` (
-  `idsocios` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) DEFAULT NULL,
+CREATE TABLE `especialidad` (
+  `codespecialidad` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(45) DEFAULT NULL,
   `foto` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idsocios`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`codespecialidad`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `socios`
+-- Dumping data for table `especialidad`
 --
 
-LOCK TABLES `socios` WRITE;
-/*!40000 ALTER TABLE `socios` DISABLE KEYS */;
-INSERT INTO `socios` VALUES (1,'fybeca','/salud/img/fybeca.jpg'),(2,'manuel','/salud/img/sesion.jpg'),(3,'manuel','/salud/img/sesion.jpg'),(4,'pruebas','/salud/img/sesion.jpg'),(5,'karen',''),(6,'/salud/img/fybeca.jpg',''),(7,'janeth',''),(8,'edro',''),(9,'/salud/img/fybeca.jpg',''),(10,'walter','/salud/img/fybeca.jpg');
-/*!40000 ALTER TABLE `socios` ENABLE KEYS */;
+LOCK TABLES `especialidad` WRITE;
+/*!40000 ALTER TABLE `especialidad` DISABLE KEYS */;
+INSERT INTO `especialidad` VALUES (1,'1','/salud/img/drhouse.jpg');
+/*!40000 ALTER TABLE `especialidad` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-26 15:15:16
+-- Dump completed on 2014-08-26 14:07:47
