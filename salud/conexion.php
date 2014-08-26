@@ -8,7 +8,7 @@ class Conectar{
  // se crea una funcion estatica para la conexion
  public static function con(){
 
-  $con = mysql_connect("localhost","root","jamp3212"); // variable $con se guarda la conexion a MySQL. "servidor","usuario","contraseña"
+  $con = mysql_connect("localhost","root","root"); // variable $con se guarda la conexion a MySQL. "servidor","usuario","contraseña"
   
   mysql_query("SET NAMES 'utf8'"); // indicamos que trabajaremos con el cotejamiento para evitar errores con tildes y caracteres especiales
   
