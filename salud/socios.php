@@ -31,7 +31,7 @@
 		<b>Doctores Asociados</b>
 		<br>
 		<br>
-		<a href="doctores.php"><img id="fotos" src="img/doctores.jpg"/></a></p>
+		<a href="Especialidad.php"><img id="fotos" src="img/doctores.jpg"/></a></p>
 		<br>
 		</div>
 	
