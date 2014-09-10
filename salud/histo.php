@@ -52,7 +52,7 @@ include('metadatos.php');
   			  $conexion = mysqli_connect(
 			  'localhost',
 			  'root',
-			  'jamp3212',
+			  'root',
 			  'proyecto'
 			);
 
@@ -61,10 +61,7 @@ include('metadatos.php');
 			  exit();
 			}
 
-			$resultado = mysqli_query(
-			  $conexion,
-			  'SELECT * FROM tratamiento'
-			);
+			$resultado = mysqli_query($conexion,'SELECT * FROM tratamiento where historia='.$_SESSION['sesion_id']);
 
 			if ($resultado == FALSE){
 			  echo('Error en la consulta.');
