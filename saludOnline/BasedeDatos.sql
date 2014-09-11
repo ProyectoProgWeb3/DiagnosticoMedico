@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `proyecto` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `proyecto`;
--- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.5.37, for debian-linux-gnu (x86_64)
 --
 -- Host: 127.0.0.1    Database: proyecto
 -- ------------------------------------------------------
--- Server version	5.6.16
+-- Server version	5.5.37-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -48,31 +48,6 @@ CREATE TABLE `consultamedica` (
 LOCK TABLES `consultamedica` WRITE;
 /*!40000 ALTER TABLE `consultamedica` DISABLE KEYS */;
 /*!40000 ALTER TABLE `consultamedica` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `empresas`
---
-
-DROP TABLE IF EXISTS `empresas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `empresas` (
-  `idempresas` int(11) NOT NULL,
-  `nombre` varchar(45) DEFAULT NULL,
-  `foto` varchar(2000) DEFAULT NULL,
-  PRIMARY KEY (`idempresas`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `empresas`
---
-
-LOCK TABLES `empresas` WRITE;
-/*!40000 ALTER TABLE `empresas` DISABLE KEYS */;
-INSERT INTO `empresas` VALUES (1111,'Ecuasanitas','\"img/ecuasanitas.jpg\"'),(2222,'Fybeca','\"img/fybeca.jpg\"'),(3333,'Pharmacys','\"img/pharmacys.jpg\"');
-/*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -190,12 +165,14 @@ DROP TABLE IF EXISTS `paciente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `paciente` (
-  `codpaciente` int(11) NOT NULL,
+  `codpaciente` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incremento id de cada paciente, indice unico',
   `persona` int(11) DEFAULT NULL,
-  `tiposangre` varchar(45) DEFAULT NULL,
-  `login` varchar(45) DEFAULT NULL,
-  `passw` varchar(45) DEFAULT NULL,
+  `email` varchar(64) NOT NULL COMMENT 'email del paciente, unico',
+  `usuarioid` varchar(64) NOT NULL COMMENT 'nombre del usuario, unico',
+  `clavehash` varchar(255) NOT NULL COMMENT 'clave del usuario con algoritmo hash',
   PRIMARY KEY (`codpaciente`),
+  UNIQUE KEY `usuarioid` (`usuarioid`),
+  UNIQUE KEY `email` (`email`),
   KEY `fk_paciente_1_idx` (`persona`),
   CONSTRAINT `fk_paciente_1` FOREIGN KEY (`persona`) REFERENCES `persona` (`codpersona`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -219,7 +196,7 @@ DROP TABLE IF EXISTS `persona`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `persona` (
-  `codpersona` int(11) NOT NULL,
+  `codpersona` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incremento id de cada persona, indice unico',
   `nombres` varchar(45) DEFAULT NULL,
   `apellidos` varchar(45) DEFAULT NULL,
   `sexo` char(1) DEFAULT NULL,
@@ -307,4 +284,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-08 21:26:03
+-- Dump completed on 2014-08-07  9:53:41
