@@ -196,7 +196,7 @@ DROP TABLE IF EXISTS `persona`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `persona` (
-  `codpersona` int(11) NOT NULL,
+  `codpersona` int(11) NOT NULL AUTO_INCREMENT COMMENT 'auto incremento id de cada persona, indice unico',
   `nombres` varchar(45) DEFAULT NULL,
   `apellidos` varchar(45) DEFAULT NULL,
   `sexo` char(1) DEFAULT NULL,

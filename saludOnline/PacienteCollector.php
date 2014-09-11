@@ -1,39 +1,42 @@
 <?php
 
-include_once('Paciente.php');
+include_once('paciente.php');
 include_once('Collector.php');
 
 class PacienteCollector extends Collector
 {
   
-  function showDemos() {
-    $rows = self::$db->getRows("SELECT * FROM paciente ");        
-    $arrayDemo= array();        
-    foreach ($rows as $c){
-      $aux = new Paciente($c{'codpaciente'},$c{'login'});
-      array_push($arrayDemo, $aux);
-    }
-    return $arrayDemo;        
+  function showPaciente($id) {
+    $row = self::$db->getRows("SELECT * FROM Paciente where codpaciente= ? ", array("{$id}"));
+    $ObjPaciente = new Paciente($row[0]{'codpaciente'},$row[0]{'usuarioid'},$row[0]{'persona'},$row[0]{'email'},$row[0]{'clavehash'});
+    return $ObjPaciente;
   }
 
-  function UserByUsername($user,$passw) {
- 
-    $row = self::$db->getRows("SELECT * FROM paciente"); 
-    $demo = new Demo($row{'codpaciente'});
-    return $demo;
-    
-    /*     
-    $arrayDemo= array();        
+  function createPaciente($usuarioid,$email,$clavehash,$persona) {
+    $insertrow = self::$db->insertRow("INSERT INTO proyecto.Paciente (codpaciente, usuarioid,email,clavehash,persona) VALUES (?, ?,?,?,?)", array(null, "{$usuarioid}", "{$email}", "{$clavehash}", "{$persona}"));
+      return $insertrow;
+  }  
+
+  function readPacientes() {
+    $rows = self::$db->getRows("SELECT * FROM paciente");
+    $arrayPaciente= array();        
     foreach ($rows as $c){
-      $aux = new Demo($c{'codpaciente'});
-      array_push($arrayDemo, $aux);
+      $aux = new Paciente($c{'codpaciente'},$c{'usuarioid'},$c{'persona'},$c{'email'},$c{'clavehash'});
+      array_push($arrayPaciente, $aux);
     }
-    return $arrayDemo;        
-    */
+    return $arrayPaciente;        
   }
+  
+  function updatePaciente($id,$usuarioid) {    
+    $insertrow = self::$db->updateRow("UPDATE proyecto.Paciente SET Paciente.codpaciente = ?  WHERE Paciente.idpaciente = ? ", array( "{$usuarioid}",$id));
+  }  
+
+  function deletePaciente($id) {    
+    $deleterow = self::$db->deleteRow("DELETE FROM proyecto.Paciente WHERE codpaciente= ?", array("{$id}"));
+  }  
+
+
 
 }
 ?>
-
-
 
