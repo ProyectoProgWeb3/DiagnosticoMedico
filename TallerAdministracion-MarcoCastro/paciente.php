@@ -2,25 +2,25 @@
 
 class Paciente
 {
-    private $idPaciente;
+    private $codpaciente;
     private $persona;
     private $email;
     private $usuarioid;
     private $clavehash;
     
-     function __construct($idPaciente, $usuarioid,$persona,$email,$clavehash) {
-       $this->idPaciente = $idPaciente;
+     function __construct($codpaciente, $usuarioid,$persona,$email,$clavehash) {
+       $this->codpaciente = $codpaciente;
        $this->usuarioid = $usuarioid;
          $this->persona = $persona;
          $this->email = $email;
          $this->clavehash = $clavehash;
      }
     
-     function setIdPaciente($idPaciente){
-       $this->idPaciente = $idPaciente;
+     function setcodpaciente($codpaciente){
+       $this->codpaciente = $codpaciente;
      } 
-     function getIdPaciente(){
-       return $this->idPaciente;
+     function getcodpaciente(){
+       return $this->codpaciente;
      } 
      function setusuarioid($usuarioid){
        $this->usuarioid = $usuarioid;

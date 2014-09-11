@@ -14,10 +14,10 @@ include_once("paciente.php");
 $PacienteCollectorObj = new PacienteCollector();
 $ObjPaciente = $PacienteCollectorObj->showPaciente($id);
 ?>
-<h2>Editar Objeto Demo </h2>
+<h2>Editar Objeto Paciente</h2>
 <form action="editar.php" method="post" >
 <p>
-Id: <input type="text" name="idpaciente" value="<?php echo $ObjPaciente->getIdPaciente(); ?>" readonly />
+Id: <input type="text" name="codpaciente" value="<?php echo $ObjPaciente->getcodpaciente(); ?>" readonly />
 </p>
 
 <p>
