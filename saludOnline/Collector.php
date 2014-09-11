@@ -2,10 +2,10 @@
 include_once('dataBase.php');
 
 // Define configuration
-define("DB_HOST", "mysql1.000webhost.com");
-define("DB_USER", "a9144011_root");
-define("DB_PASS", "proyect777");
-define("DB_NAME", "a9144011_proyect");
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "root");
+define("DB_NAME", "proyecto");
 
 
 class Collector extends dataBase
