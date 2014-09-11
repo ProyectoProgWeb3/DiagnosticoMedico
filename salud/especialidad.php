@@ -1,12 +1,6 @@
+
 <html>
-
-<?php 
-include('metadatos.php');
-
-?>
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-</head>
+<?php include('metadatos.php');?>
 <body>
 <div class="container_24">
 	<?php include('header.php'); ?>
@@ -26,9 +20,8 @@ include('metadatos.php');
 				</nav></a>
 	</div>
 	
-	
-	
 	<div id="contenedor_derecho" class="grid_20">
+	
 	
 		<?php
 		include_once("EspecialidadCollector.php");
@@ -37,23 +30,25 @@ include('metadatos.php');
 
 		$EspecialidadCollectorObj = new EspecialidadCollector();
 
-		foreach ($EspecialidadCollectorObj->showEspePagina() as $c){
+		foreach ($EspecialidadCollectorObj->showespePagina() as $c){
 		  echo "<div>";
 
-		  echo '<img id="logos" src='.$c->getFoto().'></img>';
-		  echo $c->getCodespecialidad() . "   " .$c->getDescripcion();                                    
+		  echo '<img id="logos" src='.$c->getfoto().'></img>';
+		  echo $c->getcodespecialidad() . "   " .$c->getdescripcion();                                    
 		  echo "</div>"; 
 		}
 
 
 		?>
 
+		
 	
 	
 	<div class="clear"></div>
 	</div>
+	
 	<div class="clear"></div>
-	<?php include('footer.php'); ?>
+	
 	
 </div>
 </body>

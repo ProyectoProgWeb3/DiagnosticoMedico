@@ -1,5 +1,36 @@
 <html>
 <?php include('metadatos.php');?>
+<script type="text/javascript">
+    function comprobar() {
+        var mirarLargo="no";
+        var mirarIgual="no";
+        var contra1 = document.formulario.clavehash
+        var contra2 = document.formulario.clavehash2
+        var aviso = document.getElementById("aviso");
+        aviso.innerHTML = ""
+        if (contra1.value.length >= 6) {
+            mirarLargo = "si"
+        }
+        else {
+            texto = "La contraseña debe tener más de 6 caracteres.<br/>"
+            aviso.innerHTML += texto
+        }
+        if (contra1.value == contra2.value) {
+            mirarIgual = "si"
+        }
+        else {
+            texto = "La contraseña y su repetición deben ser iguales.<br/>"
+            aviso.innerHTML += texto
+        }
+        if (mirarLargo == "no" || mirarIgual == "no") {
+            return false
+        }
+    }
+    function restaurar() {
+        var aviso = document.getElementById("aviso");
+        aviso.innerHTML = ""
+    }
+</script>
 <body>
 <div class="container_24">
 	<?php include('header.php'); ?>
@@ -30,7 +61,7 @@
 				<div class="col-2-3">
 					<div class="contenedor_registro">
 						<article>
-                            <form action="registrar.php" method="post" name="contact">
+                            <form name="formulario" action="insertar.php" method="post"  onsubmit="return comprobar()">
 
 
                                 <div class="nuevo_registro">
@@ -39,18 +70,18 @@
                                     <div class="leftCol">
 									<table>
 										<tr>
-                                        <td><label for="usuario">Nombre de Usuario</label></td>
-                                        <td><input tabindex="1" type="text" name="usuario" id="usuario" class="txtBox" value="" /></td>
+                                        <td><label for="usuarioid">Nombre de Usuario</label></td>
+                                        <td><input tabindex="1" type="text" name="usuarioid" id="usuarioid" class="txtBox" value="" /></td>
                                         
 										</tr>
 										<tr>
-                                        <td><label for="contraseña">Contrase&ntilde;a</label></td>
-                                        <td><input tabindex="2" type="password" name="contrasenia" id="contrasenia" class="txtBox" value="" /></td>
+                                        <td><label for="clavehash">Contrase&ntilde;a</label></td>
+                                        <td><input tabindex="2" type="password" name="clavehash" id="clavehash" class="txtBox" value="" /></td>
                                         
 										</tr>
 										<tr>
-                                        <td><label for="contraseña">Repetir Contrase&ntilde;a</label></td>
-                                        <td><input tabindex="3" type="password" name="recontrasenia" id="recontrasenia" class="txtBox" value="" /></td>
+                                        <td><label for="clavehash2">Repetir Contrase&ntilde;a</label></td>
+                                        <td><input tabindex="3" type="password" name="clavehash2" id="clavehash2" class="txtBox" value="" /></td>
                                         
 										</tr>
 										<tr>
@@ -64,14 +95,14 @@
                                         
 										</tr>
 										<tr>
-                                        <td><label for="nacimiento" style="padding-right: 0; width: 140px" >Fecha de nacimiento</label></td>
-                                        <td><input tabindex="6" type="date" name="nacimiento" min="1913-01-01" max="2014-07-07"/></td>
+                                        <td><label for="fechanac" style="padding-right: 0; width: 140px" >Fecha de nacimiento</label></td>
+                                        <td><input tabindex="6" type="date" name="fechanac" min="1913-01-01" max="2014-07-07"/></td>
                                         
 										</tr>
 										<tr>
-                                        <td><label for="genero">Genero</label><br></td>
-                                        <td><input tabindex="7" type="radio" name="genero" value="masculino">Masculino<br></td>
-                                        <td><input tabindex="7" type="radio" name="genero" value="femenino">Femenino</td>
+                                        <td><label for="sexo">Genero</label><br></td>
+                                        <td><input tabindex="7" type="radio" name="sexo" value="m">Masculino<br></td>
+                                        <td><input tabindex="7" type="radio" name="sexo" value="f">Femenino</td>
                                         
 										</tr>
 										<tr>
@@ -86,6 +117,7 @@
                                 </div>
                                 <p align="center"><input type="submit" class="button" value="Enviar" name="submit"></p>
                             </form>
+                            <p id="aviso"></p>
 						</article>
 					</div>
 				</div>

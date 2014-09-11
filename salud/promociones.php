@@ -8,7 +8,7 @@
 	<div class="clear"></div>
 
     <div id="contenedor_izquierdo" class="grid_4">
-        <a href="registrar.php"><nav id="iniciar_sesion" class="btn btn-lg btn-primary">
+        <a href="registro.php"><nav id="iniciar_sesion" class="btn btn-lg btn-primary">
                 Registro
             </nav></a>
         <a href="consultas.php"><nav id="consulta" class="btn btn-lg btn-success">

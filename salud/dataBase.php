@@ -53,8 +53,9 @@ class dataBase
 
   public function insertRow($query, $params){
     try{ 
-      $stmt = $this->datab->prepare($query);
+      $stmt = $this->datab->prepare($query); 
       $stmt->execute($params);
+      return  $this->datab->lastInsertId();
       }catch(PDOException $e){
       throw new Exception($e->getMessage());
     }           
