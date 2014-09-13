@@ -21,8 +21,8 @@
 				Promociones
 				</nav></a>
 	</div>
-	<div id="contenedor_derecho" class="grid_10" align: center>
-		<div >
+	<div id="contenedor_derecho" class="grid_6">
+		<div>
 		   <br>
 		   <br>
 		    <label>Acceso a Pacientes </label>
@@ -36,7 +36,15 @@
 		</form>
 	   </div>
 	</div>
-	<div></div>
+	<DIV STYLE="position:absolute; top:200px; left:400px; width:500px; height:405px; background-image: url(../salud/img/pareja.jpg)">
+		<br>
+		<label>¡Queremos estar más cerca de tí!</label>
+		</br>
+		Aquí podrás realizar todas tus consultas de una manera ágil, directa y sencilla; además de tener acceso a todos los servicios que creamos pensando en tu comodidad!
+		<h2>Bienvenido a <h2>
+		<h2>tu Mundo</h2> 
+		<h2>Salud 24/7</h2>
+	</DIV>
 	<div class="clear"></div>
 	
 	<div class="clear"></div>
