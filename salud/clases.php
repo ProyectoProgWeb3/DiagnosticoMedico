@@ -28,6 +28,8 @@ class Clases
     // se crean dos sesiones, una para mostrar el nombre de usuario del sistema y la otra para guardar en las tablas lo que realiza el usuario del sistema (integridad referencial)
     $_SESSION["sesion_usuario"] = $reg["login"];
     $_SESSION["sesion_id"] = $reg["codpaciente"];
+    $_SESSION["autentificado"]= "SI";
+    
    
     // se devuelve 1 para indicar que se logueo exitosamente
     return 1; 
