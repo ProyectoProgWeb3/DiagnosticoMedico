@@ -1,18 +1,13 @@
 * { padding:0px; margin:0px; }
 
-a:hover {
-	background-color: #333366;
-	font-size: 20px;
-	color: #006;
-	font-weight: bold;
-	font-style: italic;
+a:hover {		
 	font-family: Tahoma, Geneva, sans-serif;
 }
 #menu {margin:auto;}
 #nav1 {list-style:none;}
 #nav1 li {
 float:left;
-background-color:#336699
+
 }
 #nav1 li a {
 	display: block;
@@ -31,7 +26,7 @@ background-color:#336699
 	position: absolute;
 	list-style: none;
 	width: 250px;
-	background-color: #0000CC;
+	
 }
 
 #nav1 ul.submenu li {

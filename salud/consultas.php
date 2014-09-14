@@ -1,4 +1,5 @@
 <html>
+<script>var AsisteClick = document.createElement("script");AsisteClick.async = true; AsisteClick.src = "http://www.asisteclick2.com/js/status_image.php?lang=Spanish&async=1&base_url=http://www.asisteclick2.com&l=sep1422&x=1170&deptid=0&";var s0 = document.getElementsByTagName('script')[0];s0.parentNode.insertBefore(AsisteClick, s0);  window.onload = function() { var s = document.getElementById('ph_sep1422'); s.innerHTML = ac_document_write;}</script>
 <?php include('metadatos.php');?>
 <body>
 <div class="container_24">
@@ -24,13 +25,8 @@
 		<br>
 		<div class="grid_5 alpha">
 		<p align="center"><b>Lista de Doctores Conectados</b></p>
+		<div id='ph_sep1422'></div>
 		
-		<ul>	
-                <li>Doctor Goku</li>
-                <li>Doctor House</li>
-                <li>Doctor Mengeche</li>
-                <li>Doctor Octoppus</li>
-		</ul>	
 		<br>
 		<br>
 		

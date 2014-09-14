@@ -7,9 +7,9 @@
 	    <?php
         session_start();
         if (isset($_SESSION["sesion_usuario"])) {
-   		 echo '<a href="cerrar_sesion.php"><img src="img/cerrar.png"/></a>';
+   		 echo '<a href="cerrar_sesion.php"><img src="img/cerrar.jpg"/></a>';
     }else{
-   		 echo '<a href="iniciar.php"><img src="img/entrar.png"/></a>';
+   		 echo '<a href="iniciar.php"><img src="img/entrar.jpg"/></a>';
   }
 ?>
 </nav>
