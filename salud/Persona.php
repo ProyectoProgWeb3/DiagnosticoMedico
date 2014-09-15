@@ -3,39 +3,39 @@
 class Persona
 {
 
-    private $idPersona;
-    private $nombre;
-    private $apellido;
+    private $codpersona;
+    private $nombres;
+    private $apellidos;
     private $sexo;
     private $fechanac;
     private $direccion;
     
-     function __construct($idPersona, $nombre,$apellido,$sexo,$fechanac,$direccion) {
-       $this->idPersona = $idPersona;
-       $this->nombre = $nombre;
-       $this->apellido=$apellido;
+     function __construct($codpersona, $nombres,$apellidos,$sexo,$fechanac,$direccion) {
+       $this->codpersona = $codpersona;
+       $this->nombres = $nombres;
+       $this->apellidos=$apellidos;
        $this->sexo=$sexo;
        $this->fechanac=$fechanac;
        $this->direccion=$direccion;
      }
     
-     function setidPersona($idPersona){
-       $this->idPersona = $idPersona;
+     function setcodpersona($codpersona){
+       $this->codpersona = $codpersona;
      } 
-     function getidPersona(){
-       return $this->idPersona;
+     function getcodpersona(){
+       return $this->codpersona;
      } 
-     function setNombre($nombre){
-       $this->nombre = $nombre;
+     function setnombres($nombres){
+       $this->nombres = $nombres;
      } 
-     function getNombre(){
-       return $this->nombre;
+     function getnombres(){
+       return $this->nombres;
      }
-    function setApellido($apellido){
-        $this->apellido = $apellido;
+    function setapellidos($apellidos){
+        $this->apellidos = $apellidos;
     }
-    function getApellido(){
-        return $this->apellido;
+    function getapellidos(){
+        return $this->apellidos;
     }
     function setSexo($sexo){
         $this->sexo = $sexo;

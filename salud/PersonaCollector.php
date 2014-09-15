@@ -18,7 +18,10 @@ class PersonaCollector extends Collector
   function insertarRegistro($parametros){
       self::$db->insertRow("insert into persona values ",$parametros);
   }
-
+    function createPersona($nombres,$apellidos,$sexo,$fechanac) {
+        $insertrow = self::$db->insertRow("INSERT INTO persona (codpersona, nombres,apellidos,sexo,fechanac) VALUES (?, ?,?,?,?)", array(null, "{$nombres}", "{$apellidos}", "{$sexo}", "{$fechanac}"));
+        return $insertrow;
+    }
 }
 ?>
 

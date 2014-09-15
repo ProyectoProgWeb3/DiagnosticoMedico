@@ -13,7 +13,7 @@ class PacienteCollector extends Collector
   }
 
   function createPaciente($usuarioid,$email,$clavehash,$persona) {
-    $insertrow = self::$db->insertRow("INSERT INTO proyecto.Paciente (codpaciente, usuarioid,email,clavehash,persona) VALUES (?, ?,?,?,?)", array(null, "{$usuarioid}", "{$email}", "{$clavehash}", "{$persona}"));
+    $insertrow = self::$db->insertRow("INSERT INTO paciente (codpaciente, usuarioid,email,clavehash,persona) VALUES (?, ?,?,?,?)", array(null, "{$usuarioid}", "{$email}", "{$clavehash}", "{$persona}"));
       return $insertrow;
   }  
 
@@ -28,11 +28,11 @@ class PacienteCollector extends Collector
   }
   
   function updatePaciente($id,$usuarioid) {    
-    $insertrow = self::$db->updateRow("UPDATE proyecto.Paciente SET Paciente.codpaciente = ?  WHERE Paciente.idpaciente = ? ", array( "{$usuarioid}",$id));
+    $insertrow = self::$db->updateRow("UPDATE Paciente SET Paciente.codpaciente = ?  WHERE Paciente.idpaciente = ? ", array( "{$usuarioid}",$id));
   }  
 
   function deletePaciente($id) {    
-    $deleterow = self::$db->deleteRow("DELETE FROM proyecto.Paciente WHERE codpaciente= ?", array("{$id}"));
+    $deleterow = self::$db->deleteRow("DELETE FROM Paciente WHERE codpaciente= ?", array("{$id}"));
   }  
 
 
