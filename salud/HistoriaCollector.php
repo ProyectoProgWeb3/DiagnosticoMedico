@@ -7,7 +7,8 @@ class HistoriaCollector extends Collector
 {
   
   function showDemos() {
-    $rows = self::$db->getRows("SELECT * FROM historia");      
+    $rows = self::$db->getRows("SELECT * FROM historia where codhistoriaclinica=".$_SESSION['sesion_id']);      
+    
    
     $arrayDemo= array();        
     foreach ($rows as $c){

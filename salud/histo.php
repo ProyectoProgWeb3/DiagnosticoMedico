@@ -42,7 +42,7 @@ include('metadatos.php');
 			foreach ($HistoriaCollectorObj->showDemos() as $c)
 			{
   			echo "<div>";
-  			echo "<label>Numero de Historia Clinica:   </label>";
+  			echo "<label>Numero de Historia Clinica: </label>";
   			echo  $c->getcodhistoriaclinica();  			
   			echo "</div>"; 	
   			}	
