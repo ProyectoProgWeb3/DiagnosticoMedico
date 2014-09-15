@@ -24,7 +24,7 @@
         $PersonaCollectorObj = new PersonaCollector();
         $idpersona= $PersonaCollectorObj->createPersona($valor4,$valor5,$valor6,$valor7);
 
-        include_once("pacienteCollector.php");
+        include_once("PacienteCollector.php");
 
         $PacienteCollectorObj = new PacienteCollector();
         $PacienteCollectorObj->createPaciente($valor,$valor1,$valor2,$idpersona);
