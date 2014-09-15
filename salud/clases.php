@@ -8,7 +8,7 @@ class Clases
  public function login( $usuario, $pass ){
 
   // 
-  $sql= "SELECT * FROM paciente WHERE login ='".$usuario."' AND passw ='".$pass."'";
+  $sql= "SELECT * FROM paciente WHERE usuarioid ='".$usuario."' AND clavehash ='".$pass."'";
 
   // se ejectua la consulta y se usa el metodo con de la clase class para la conexion, y se guarda en $res lo que devuelve la consulta  
   $res=mysql_query( $sql, Conectar::con() );
@@ -26,7 +26,7 @@ class Clases
    if( $reg = mysql_fetch_array( $res ) ){
     
     // se crean dos sesiones, una para mostrar el nombre de usuario del sistema y la otra para guardar en las tablas lo que realiza el usuario del sistema (integridad referencial)
-    $_SESSION["sesion_usuario"] = $reg["login"];
+    $_SESSION["sesion_usuario"] = $reg["usuarioid"];
     $_SESSION["sesion_id"] = $reg["codpaciente"];
     $_SESSION["autentificado"]= "SI";
     
